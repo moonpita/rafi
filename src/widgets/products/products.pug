@@ -1,0 +1,8 @@
+mixin productsSec(title, buttonText) 
+  section.products-sec 
+    .container 
+      h2.sec-title.products__title #{title}
+        .products 
+          each product in products 
+            +product(product.title, product.description, product.image, product.type) 
+        a.btn.products__all(href="/")  #{buttonText}

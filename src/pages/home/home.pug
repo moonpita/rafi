@@ -1,0 +1,45 @@
+html
+  include ./homeVars.pug
+  include ../../shared/ui/product/product.pug
+  include ../../widgets/header/header.pug
+  
+  block Variables
+
+  section.hero-sec 
+    .container 
+      .hero 
+        .hero-content 
+          span.hero-content__welcome Welcome to Rafi -
+          h1.hero-content__title Your digital construction showroom 
+          .hero-content__search.hero-search 
+            button.hero-search__btn 
+            input.hero-seaarch__input(type="text" placeholder="Discover construction materials, furniture, and services")
+          .hero-content__tags.hero-tags 
+            a.hero-tags__item(href="/") Interior design 
+            a.hero-tags__item(href="/") Villa 
+            a.hero-tags__item(href="/") Apartment complext 
+            a.hero-tags__item(href="/") Hotel
+            a.hero-tags__item(href="/") Restaurant 
+            a.hero-tags__item(href="/") Spa 
+            a.hero-tags__item(href="/") Fitness center
+            a.hero-tags__item(href="/") Beauty salon
+            a.hero-tags__item(href="/") Retail
+            a.hero-tags__item(href="/") Office
+
+        img.hero__img(src="./hero.svg", alt="")
+
+  section.together-sec
+    .container 
+      .together 
+        h2.together__title We bring together a comprehensive array of construction materials, furniture, and services, all in one place.
+        p.together__description Whether you're renovating your home, designing a hotel, or refurbishing a restaurant, Rafi simplifies your search for quality products and services.
+
+  include ./whyUs/whyUs.pug
+
+  include ../../widgets/products/products.pug
+  +productsSec('Products', 'All products')
+  
+
+  
+  
+

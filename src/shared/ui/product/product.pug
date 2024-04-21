@@ -1,0 +1,6 @@
+mixin product(title, description, image, type)
+  .product 
+    span.product__type #{type}
+    img.product__image(src=image, alt="")
+    div.product__title #{title}
+    p.product__description #{description}
