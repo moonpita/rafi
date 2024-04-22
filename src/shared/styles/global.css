@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,4 +50,230 @@ table {
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button, a, * {
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: var(--black);
+}
+
+:root {
+  --red: #d7282F;
+  --black: #3e3e3e;
+  --grey: #bababa;
+  --greyBlue: #F2F3F7;
+}
+
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 300;
+  src: url("../fonts/OverusedGrotesk-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 400;
+  src: url("../fonts/OverusedGrotesk-Book.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 500;
+  src: url("../fonts/OverusedGrotesk-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 600;
+  src: url("../fonts/OverusedGrotesk-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 700;
+  src: url("../fonts/OverusedGrotesk-Bold.woff2") format("woff2");
+}
+body {
+  font-family: "Grotesk", sans-serif;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: block;
+  padding: 10px 36px;
+  background: var(--red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.header-top {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-top__signBtn {
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 500;
+}
+.header-top__signBtn.signUp {
+  margin-right: 40px;
+}
+.header__logo {
+  width: 159px;
+  height: 43px;
+  margin-right: 20px;
+}
+.header__logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.header__preopen {
+  width: 300px;
+  padding: 14px 27px;
+  background: var(--red);
+  color: #fff;
+  font-weight: 600;
+  margin-right: 36px;
+  border-radius: 15px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav__item {
+  display: block;
+  font-size: 14px;
+  color: var(--black);
+  line-height: 24px;
+}
+.header-nav__item:not(:last-child) {
+  margin-right: 40px;
+}
+.header__join {
+  margin-left: auto;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  line-height: 24px;
+}
+
+.sec-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+section {
+  margin-top: 100px;
+}
+
+.together {
+  width: 100%;
+  border-radius: 40px;
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 48px 112px;
+}
+.together__title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.together__description {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 24px auto 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.products {
+  margin-top: 40px;
+  height: -moz-max-content;
+  height: max-content;
+}
+.products-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.products-top-btns {
+  display: flex;
+  align-items: center;
+}
+.products-top-btns__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--greyBlue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.products-top-btns__prev {
+  margin-right: 24px;
+}
+.products__all {
+  margin: 32px auto 0;
+  width: 269px;
+  height: 52px;
+  padding: 0px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 52px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--greyBlue);
+  padding-bottom: 16px;
+  height: -moz-max-content;
+  height: max-content;
+}
+.product__image {
+  width: 100%;
+  height: 212px;
+}
+.product__type {
+  margin-top: 16px;
+  color: var(--grey);
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0px 16px;
+}
+.product__title {
+  margin-top: 4px;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 0px 16px;
+}
+.product__description {
+  margin-top: 4px;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 0px 16px;
 }/*# sourceMappingURL=global.css.map */

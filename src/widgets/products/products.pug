@@ -1,8 +1,16 @@
-mixin productsSec(title, buttonText) 
+mixin productsSec(title, buttonText, products, numberOnPage) 
   section.products-sec 
     .container 
-      h2.sec-title.products__title #{title}
-        .products 
+      .products-top 
+        h2.sec-title.products__title #{title}
+        .products-top-btns 
+          button(class=`products-top-btns__btn products-top-btns__prev products-top-btns__prev-${numberOnPage}`)
+            img.arrow(src="../../widgets/products/arrow-back.svg", alt="")
+          button(class=`products-top-btns__btn products-top-btns__next products-top-btns__next-${numberOnPage}`)
+            img.arrow(src="../../widgets/products/arrow-next.svg", alt="")
+      div(class=`products swiper products-slider-${numberOnPage}`) 
+        .swiper-wrapper 
           each product in products 
             +product(product.title, product.description, product.image, product.type) 
-        a.btn.products__all(href="/")  #{buttonText}
+      a.btn.products__all(href="/")  #{buttonText}
+

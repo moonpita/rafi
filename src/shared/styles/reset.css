@@ -50,4 +50,16 @@ table {
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button, a, * {
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: var(--black);
 }/*# sourceMappingURL=reset.css.map */

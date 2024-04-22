@@ -1,21 +1,21 @@
 head
-  link(rel="stylesheet" href="../shared/styles/global.css")
+  link(rel="stylesheet" href="../../shared/styles/global.css")
 body 
-  header 
+  header.header-sec
     .container 
-      .top-header 
-        button.signBtn.signUp Sign Up
-        button.signBtn.logIn Log In
+      .header-top
+        button.header-top__signBtn.signUp Sign Up
+        button.header-top__signBtn.logIn Log In
 
-    .header 
-      a(href="/").header__logo
-        img.header__logo-img(src="./logo.svg")
-      .header__preopen Pre-opening stage - registration and accommodation for free
-      nav.header-nav 
-        a.header-nav__item(href="/") Products 
-        a.header-nav__item(href="/") Companies
-        a.header-nav__item(href="/") Projects
-        a.header-nav__item(href="/") About us
-        a.header-nav__item(href="/") Favorites
-        a.header-nav__item(href="/") Blog
-      button.btn.header__join Join Rafi
+      .header 
+        a(href="/").header__logo
+          img.header__logo-img(src="../../widgets/header/logo.svg")
+        .header__preopen Pre-opening stage - registration and accommodation for free
+        nav.header-nav 
+          a.header-nav__item(href="/") Products 
+          a.header-nav__item(href="/") Companies
+          a.header-nav__item(href="/") Projects
+          a.header-nav__item(href="/") About us
+          a.header-nav__item(href="/") Favorites
+          a.header-nav__item(href="/") Blog
+        button.btn.header__join Join Rafi

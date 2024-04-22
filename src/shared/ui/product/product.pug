@@ -1,6 +1,6 @@
 mixin product(title, description, image, type)
-  .product 
-    span.product__type #{type}
+  .product.swiper-slide 
     img.product__image(src=image, alt="")
+    span.product__type #{type}
     div.product__title #{title}
     p.product__description #{description}

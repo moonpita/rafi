@@ -1,7 +1,11 @@
 html
+  link(rel="stylesheet", href="./home.css")
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+
+
   include ./homeVars.pug
-  include ../../shared/ui/product/product.pug
   include ../../widgets/header/header.pug
+  include ../../shared/ui/product/product.pug
   
   block Variables
 
@@ -13,7 +17,8 @@ html
           h1.hero-content__title Your digital construction showroom 
           .hero-content__search.hero-search 
             button.hero-search__btn 
-            input.hero-seaarch__input(type="text" placeholder="Discover construction materials, furniture, and services")
+              img.hero-search__btn-image(src="./search.svg")
+            input.hero-search__input(type="text" placeholder="Discover construction materials, furniture, and services")
           .hero-content__tags.hero-tags 
             a.hero-tags__item(href="/") Interior design 
             a.hero-tags__item(href="/") Villa 
@@ -32,13 +37,19 @@ html
     .container 
       .together 
         h2.together__title We bring together a comprehensive array of construction materials, furniture, and services, all in one place.
-        p.together__description Whether you're renovating your home, designing a hotel, or refurbishing a restaurant, Rafi simplifies your search for quality products and services.
+        p.together__description Whether you're renovating your home, designing a hotel, or refurbishing<br> a restaurant, Rafi simplifies your search for quality products and services.
 
   include ./whyUs/whyUs.pug
 
   include ../../widgets/products/products.pug
-  +productsSec('Products', 'All products')
+  +productsSec('Products', 'All products', products, 1)
+  +productsSec('Projects', 'All projects', products2, 2)
   
+
+
+  include ../../widgets/footer/footer.pug
+  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+  script(src="home.js" defer) 
 
   
   
