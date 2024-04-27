@@ -17,12 +17,14 @@ footer.footer-sec
   .container 
     .footer 
       .footer-info 
-        img.footer-info__logo(src="../../widgets/footer/logo.svg", alt="")
+        a.footer-info__logo(href="./")
+          img.footer-info__logo--img(src="../../widgets/footer/logo.svg", alt="") 
         a.footer-info__link.footer-info__phone(href="tel:+723614730280") +62 361 473 02 80
         a.footer-info__link.footer-info__mail(href="mailto:rafi@gmail.com") rafi@gmail.com
       .footer-menu 
         each item in menuList 
           a.footer-menu__item(href=item.link) #{item.title} 
+      a.footer__policy Privacy Policy
 
 script(src="../../shared/lib/main.js")
 
