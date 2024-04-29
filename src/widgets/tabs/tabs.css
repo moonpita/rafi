@@ -1,0 +1,36 @@
+.tabsLine {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+  background: var(--greyBlue);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.tabsLine__item {
+  padding: 0px 22px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.tabsLine__item.active {
+  background: var(--red);
+  color: #fff;
+}
+
+.tabs__item {
+  cursor: pointer;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}/*# sourceMappingURL=tabs.css.map */

@@ -1,3 +1,60 @@
-html 
-  body 
-    h1 about
+html
+  link(rel="stylesheet" href="./about.css")
+
+
+  include ./aboutVars.pug
+  include ../../widgets/header/header.pug
+
+  block Variables
+
+  section.atop-sec 
+    .container 
+      .atop 
+        img.atop__img(src="../../pages/about/img/top.svg", alt="")
+        .atop-content 
+          h1.page-title.atop__title ABOUT US 
+          p.atop__description We created Rafi with a vision to revolutionize the construction industry by creating a digital ecosystem that empowers individuals and businesses to effortlessly navigate the complexities of building projects. Our vision is a future where access to reliable information, innovative solutions, and collaborative partnerships transforms the construction experience, making it more efficient, transparent, and accessible to all.
+
+      include ../../widgets/tabs/tabs.pug
+      +tabsLine(tabs)
+      
+      .acontent.tab-content.active(data-tab-val="Our story" data-tab-base="aboutTabs")
+        h2.page-title.acontent__title OUR STORY
+        p.acontent__text In 2023, I received a game-changing job offer – a project manager position in an apartment complex project in Bali. Excited and eager to dive in, I quickly realized the challenges ahead.<br><br> Starting the project from scratch, I needed to find contractors. However, even for a simple task like a topographic survey, it was difficult because there was no resource to find information. I had to rely on word of mouth and intensive networking, which consumed a lot of my time.<br><br>The biggest challenge was the significant differences in prices among contractors, making it impossible to define an average market price. For the same service, I received offers ranging from $200 to $600. The same was true for prices for technical inspections, soil tests, concept design development, MEP design, etc.<br><br>Similarly, when building our family villa, finding a reliable contractor with affordable prices was tough due to the lack of references. Figuring out the budget was equally challenging, as prices suggested by different contractors varied significantly. In other words, I faced a high level of uncertainty that made decision-making almost impossible.<br><br>Struggling with all these challenges, I thought, 'It would be very helpful to have all this information in one place.' That's when the idea to create a platform that simplifies construction projects, makes the market more transparent, and helps people collaborate to establish trustworthy partnerships came to me.
+
+      section.acontent.tab-content.together-sec.active(data-tab-val="Our mission" data-tab-base="aboutTabs")
+        .container 
+          .together 
+            h2.together__title OUR MISSION
+            p.together__description Our mission is to simplify construction projects for everyone, by providing<br> easy access to essential information and resources.
+
+      section.acontent.tab-content.previl-sec.active(data-tab-val="Our values" data-tab-base="aboutTabs")
+        .container 
+          .previl 
+            .previl-item
+              .previl-item__title Integrity &amp; Transparency:
+              .previl-item__description We conduct ourselves with honesty, integrity, and transparency in all aspects of our work, building trust with our clients, partners, and stakeholders through open communication and ethical business practices.
+            .previl-item
+              .previl-item__title Client-Centricity:
+              .previl-item__description We prioritize the needs and goals of our clients above all else, striving to exceed their expectations by delivering personalized solutions, exceptional service, and tangible results that drive their success and satisfaction.
+            .previl-item
+              .previl-item__title Collaboration:
+              .previl-item__description We foster a collaborative and inclusive environment where teamwork, cooperation, and mutual respect are valued, leveraging the diverse talents and perspectives of our team members to achieve shared goals and deliver exceptional results.
+            .previl-item
+              .previl-item__title Innovation &amp; Creativity:
+              .previl-item__description We embrace innovation and creativity as driving forces behind our continuous improvement and growth, constantly seeking new ideas and approaches to solve challenges and meet the evolving needs of our clients and industry.
+            .previl-item
+              .previl-item__title Learning &amp; Growth:
+              .previl-item__description At Rafi, we're committed to fostering continuous learning and professional development. Our platform serves as a vibrant community where industry professionals can exchange insights, share best practices, and collaborate on innovative solutions. We believe that investing in professional development and experience exchange is essential for business success and personal growth.
+            .previl-item.full-width
+              .previl-item__title Community Engagement:
+              .previl-item__description At Rafi, we're passionate about providing opportunities for local artisans and manufacturers to showcase their unique products to a wider audience. By partnering with us, talented artisans can promote their craftsmanship and creativity, gaining visibility and recognition in the market. Together, we celebrate the rich cultural heritage and vibrant diversity of our community, empowering local talent and fostering economic growth
+
+
+  include ../../widgets/footer/footer.pug
+  script(src="../../shared/lib/tabs.js" defer) 
+  script(src="../../pages/about/about.js" defer) 
+
+
+
+

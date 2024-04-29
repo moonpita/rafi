@@ -134,6 +134,9 @@ body {
 .header-top__signBtn.signUp {
   margin-right: 40px;
 }
+.header-sec {
+  margin-bottom: 48px;
+}
 .header__logo {
   width: 159px;
   height: 43px;
@@ -172,6 +175,13 @@ body {
   line-height: 24px;
 }
 
+.page-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.1;
+}
+
 .sec-title {
   font-size: 48px;
   font-weight: 500;
@@ -205,6 +215,12 @@ section, footer {
   margin: 24px auto 0 auto;
   text-align: center;
   color: #fff;
+}
+.together__description * {
+  color: #fff;
+}
+.together__description b {
+  font-weight: 700;
 }
 
 .products {
@@ -276,6 +292,47 @@ section, footer {
   line-height: 1.5;
   font-size: 16px;
   padding: 0px 16px;
+}
+
+.previl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.previl-item {
+  width: calc(50% - 12px);
+  padding: 46px 40px;
+  display: flex;
+  flex-direction: column;
+  background: var(--greyBlue);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+.previl-item.full-width {
+  width: 100%;
+}
+.previl-item__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  transition: all 0.3s ease;
+}
+.previl-item__description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-top: 16px;
+  transition: all 0.3s ease;
+}
+.previl-item:hover {
+  background: var(--red);
+}
+.previl-item:hover .previl-item__title {
+  color: #fff;
+}
+.previl-item:hover .previl-item__description {
+  color: #fff;
 }
 
 .footer {

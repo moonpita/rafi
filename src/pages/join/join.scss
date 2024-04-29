@@ -1,0 +1,105 @@
+.j {
+  &advantages {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 23px;
+      }
+      &__why {
+        width: 165px;
+        min-width: 165px;
+        padding: 16px 0px;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        background: var(--red);
+        &-item {
+          color: #fff;
+          text-align: center;
+          width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+
+        }
+      }
+    }
+  }
+  &success {
+      &__title {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.25;
+        margin-top: 28px;
+        & b {
+          font-weight: 700;
+        }
+      }
+      &__text {
+        font-size: 20px;
+        margin-top: 8px;
+        font-weight: 500;
+        & a {
+          color: var(--red);
+          text-decoration: underline;
+          font-weight: 700;
+        }
+    }
+  }
+
+
+  &ready {
+    width: 612px;
+    margin: 0 auto;
+    &__title {
+      text-align: center;
+    }
+    &__description {
+      margin-top: 24px;
+      font-size: 18px;
+      text-align: center;
+    }
+    &__btn {
+      width: 269px;
+      max-width: 269px;
+      text-align: center;
+      padding: 13px 0px;
+      margin: 0 auto;
+      margin-top: 32px;
+    }
+  }
+} 
+
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+  &-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 242px;
+    &__img {
+      width: 206px;
+      height: 206px;
+
+    }
+    &__title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 24px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &__description {
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}

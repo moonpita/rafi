@@ -1,0 +1,10 @@
+link(rel="stylesheet", href="../../widgets/tabs/tabs.css")
+
+
+mixin tabsLine(tabs, extraclass) 
+  .tabs.tabsLine(class=`${extraclass || ''}`)
+    each tab in tabs 
+      div(
+        class=`tabsLine__item tabs__item ${tab.isShowAll ? 'tabs__item--all' : ''} ${tab.active ? 'active' : ''}`,
+        data-tab-base=`${tab.baseName}`, data-tab-val=`${tab.name}`,
+      ) #{tab.name}

@@ -1,0 +1,30 @@
+.atop {
+  display: flex;
+}
+.atop__img {
+  width: 419px;
+  height: 189px;
+  margin-right: 69px;
+}
+.atop-content {
+  display: flex;
+  flex-direction: column;
+}
+.atop__description {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 24px;
+}
+.acontent {
+  margin-top: 38px;
+}
+.acontent__title {
+  margin-bottom: 24px;
+}
+.acontent__text {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  width: 830px;
+}/*# sourceMappingURL=about.css.map */

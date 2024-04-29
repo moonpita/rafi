@@ -62,6 +62,9 @@ body {
     }
   }
 
+  &-sec {
+    margin-bottom: 48px;
+  }
   display: flex;
   align-items: center;
   margin-top: 15px;
@@ -106,6 +109,13 @@ body {
   }
 }
 
+.page-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.1;
+}
+
 .sec-title {
   font-size: 48px;
   font-weight: 500;
@@ -140,6 +150,12 @@ section,footer {
     margin: 24px auto 0 auto;
     text-align: center;
     color: #fff;
+    & * {
+      color: #fff;
+    }
+    & b {
+      font-weight: 700;
+    }
     // width: 640px;
   }
 }
@@ -215,6 +231,50 @@ section,footer {
     line-height: 1.5;
     font-size: 16px;
     padding: 0px 16px;
+  }
+}
+
+
+// previlegion sec
+
+.previl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &-item {
+    width: calc(50% - 12px);
+    padding: 46px 40px;
+    display: flex;
+    flex-direction: column;
+    background: var(--greyBlue);
+    border-radius: 20px;
+    transition: all .3s ease;
+    margin-bottom: 24px;
+    &.full-width {
+      width: 100%;
+    }
+    &__title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 24px;
+      transition: all .3s ease;
+    }
+    &__description {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-top: 16px;
+      transition: all .3s ease;
+    }
+    &:hover {
+      background: var(--red);
+      & .previl-item__title {
+        color: #fff;
+      }
+      & .previl-item__description {
+        color: #fff;
+      }
+    }
   }
 }
 

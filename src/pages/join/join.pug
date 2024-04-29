@@ -1,14 +1,14 @@
 html
+  include ../../widgets/header/header.pug
   link(rel="stylesheet" href="./join.css")
 
 
   include ./joinVars.pug
-  include ../../widgets/header/header.pug
 
   block Variables
 
-  .container 
-    h1.join__title  Join Rafi as a Partner and Gain Exclusive Benefits to Elevate Your Business!
+  .container
+    h1.page-title.join__title  Join Rafi as a Partner and Gain Exclusive Benefits to Elevate Your Business!
     .jadvantages 
       .jadvantages-item 
         .jadvantages-item__why 
@@ -38,6 +38,59 @@ html
           span.jadvantages-item__why-item Community
           span.jadvantages-item__why-item Access
         .jadvantages-item__text Join our vibrant Rafi community and gain access to exclusive networking events, valuable resources, and collaborative opportunities. Connect with like-minded professionals and industry experts, share best practices, and explore partnership opportunities to further grow your business.
+
+    h2.jsuccess__title <b>Your success is our priority,</b> and we're here to help your thrive.
+    p.jsuccess__text <a href="./">Join</a> today and discover the endless possibilities with Rafi!
+  
+    section.together-sec
+      .container 
+        .together 
+          h2.together__title Be Among the First: Pre-Opening Bonus
+          p.together__description As we prepare to launch our platform, we're inviting companies to <b>join Rafi at no charge.</b><br><br>This limited-time offer includes a <b>3-month free</b> access period after our platform launches.
+
+    section.partners-sec 
+      .container
+        h2.sec-title.partners__title HOW TO BECOME OUR PARTNER
+        .partners 
+          .partners-item 
+            img.partners-item__img(src="../../pages/join/img/partner.svg", alt="")
+            .partners-item__title SIGN UP: 
+            .partners-item__description Create an account on our platform to get started. It's quick, easy, and completely free in pre-opening stage!
+          .partners-item 
+            img.partners-item__img(src="../../pages/join/img/partner.svg", alt="")
+            .partners-item__title Make Subscription Payment
+            .partners-item__description Select a subscription plan that fits your needs and make your payment securely online. Choose from our flexible options to access Rafi's full range of features and benefits
+          .partners-item 
+            img.partners-item__img(src="../../pages/join/img/partner.svg", alt="")
+            .partners-item__title Upload Your Products, Services, and Projects:
+            .partners-item__description Showcase your full range of offerings by uploading information about your products, services, and completed projects. This allows potential clients to see the quality and scope of your work.
+
+    section.previl-sec
+      .container 
+        .previl 
+          .previl-item
+            .previl-item__title BOOST SALES 
+            .previl-item__description Rafi provides an effective solution for showcasing your products to a targeted audience with minimal cost to marketing
+          .previl-item
+            .previl-item__title Highlight Your Presence
+            .previl-item__description Rafi provides specialized tools to set your business apart from competitors and make your company the top choice for customers
+          .previl-item
+            .previl-item__title Get insights
+            .previl-item__description With your personal account gain valuable insights for informed decision-making and manage your own product catalog within the platform, ensuring effective showcasing of your offerings.
+          .previl-item
+            .previl-item__title Gain from cost-effective marketing solutions
+            .previl-item__description Rafi offers an affordable way to market your business to a targeted audience: attract new clients with minimal cost
+          .previl-item.full-width
+            .previl-item__title Join Expert Community
+            .previl-item__description Elevate your business by connecting with industry leaders, sharing international best practices, and exchanging experiences. Enhance the quality of your products and make them more accessible to a diverse audience, positioning yourself as a leader in the construction and design industry
+
+    section.jready-sec 
+      .container 
+        .jready 
+          h2.sec-title.jready__title Ready to take your business to new heights?
+          p.jready__description it's easy! Simply sign up and create your company profile to start reaching potential clients today! 
+          a.btn.jready__btn(href="./") Join Rafi 
+
 
 
   include ../../widgets/footer/footer.pug
