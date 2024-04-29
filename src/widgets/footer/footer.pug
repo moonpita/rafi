@@ -13,14 +13,17 @@
   
   ]
 
+link(rel="stylesheet", href="../../widgets/footer/footer.css")
+
 footer.footer-sec 
   .container 
     .footer 
       .footer-info 
         a.footer-info__logo(href="./")
           img.footer-info__logo--img(src="../../widgets/footer/logo.svg", alt="") 
-        a.footer-info__link.footer-info__phone(href="tel:+723614730280") +62 361 473 02 80
-        a.footer-info__link.footer-info__mail(href="mailto:rafi@gmail.com") rafi@gmail.com
+        .footer-info-links 
+          a.footer-info__link.footer-info__phone(href="tel:+723614730280") +62 361 473 02 80
+          a.footer-info__link.footer-info__mail(href="mailto:rafi@gmail.com") rafi@gmail.com
       .footer-menu 
         each item in menuList 
           a.footer-menu__item(href=item.link) #{item.title} 

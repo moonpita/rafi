@@ -218,70 +218,6 @@ section,footer {
 }
 
 
-
-// footer
-
-.footer {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  position: relative;
-  padding-bottom: 22px;
-  &__policy {
-    cursor: pointer;
-    position: absolute;
-    color: var(--grey);
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
-    right: 0;
-    bottom: 22px;
-    text-decoration: underline;
-  }
-  &-info {
-    display: flex;
-    flex-direction: column;
-    &__logo {
-      width: 184px;
-      height: 53px;
-      &--img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-    &__link {
-      font-size: 20px;
-      line-height: 24px;
-      font-weight: 500;
-      margin-top: 23px;
-    }
-    &__mail {
-      margin-top: 14px;
-    }
-  }
-  &-menu {
-    width: 676px;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    &__item {
-      width: 125px;
-      margin-bottom: 24px;
-      line-height: 24px;
-      height: max-content;
-      &:not(:nth-child(5n)) {
-        margin-right: 12px;
-      }
-    }
-  }
-}
-
-
-
-
-
-
 // Global adaptive
 
 
@@ -312,6 +248,90 @@ section,footer {
 }
 
 
-@media (max-width: 960px) {
+@media (max-width: 980px) {
+
+  .container {
+    width: 700px;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .sec-title {
+    font-size: 32px;
+  }
+
+  section,footer {
+    margin-top: 75px;
+  }
+
+
+  .together {
+    padding: 20px 50px;
+    border-radius: 20px;
+  }
+  .together__title {
+    font-size: 28px;
+  }
   
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 600px;
+  }
+
+
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+}
+
+@media (max-width: 480px) {
+
+  .btn {
+    font-size: 16px;
+  }
+
+  .together {
+    padding: 16px;
+    border-radius: 30px;
+    &__title {
+      font-size: 28px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+  }
+
+  .sec-title {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+
+  .products-top-btns {
+    display: none;
+  }
+
+  .products {
+    margin-top: 24px;
+    width: 100vw;
+    transform: translateX(-16px);
+    padding-left: 16px;
+    padding-right: 80px;
+  }
+
+  .products__all {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    height: 52px;
+    font-size: 16px;
+    margin-top: 24px;
+  }
 }

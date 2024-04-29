@@ -87,3 +87,16 @@
 
   }
 }
+
+@media (max-width: 980px) {
+  .header-nav {
+    display: none;
+  }
+  .header-top {
+    display: none;
+  }
+  .header__join {
+    display: none;
+  }
+
+}

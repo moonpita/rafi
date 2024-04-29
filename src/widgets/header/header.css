@@ -77,4 +77,15 @@
   .header__join {
     padding: 10px 16px;
   }
+}
+@media (max-width: 980px) {
+  .header-nav {
+    display: none;
+  }
+  .header-top {
+    display: none;
+  }
+  .header__join {
+    display: none;
+  }
 }/*# sourceMappingURL=header.css.map */
