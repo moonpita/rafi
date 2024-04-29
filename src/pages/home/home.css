@@ -88,4 +88,22 @@
   font-weight: 400;
   margin-top: 16px;
   color: var(--grey);
+}
+
+@media (max-width: 1280px) {
+  .hero-tags {
+    width: 380px;
+  }
+  .hero-search {
+    width: 380px;
+  }
+  .hero-content__title {
+    width: 380px;
+  }
+  .why-list__item {
+    width: calc(25% - 18px);
+  }
+  .why-list__item-title {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=home.css.map */

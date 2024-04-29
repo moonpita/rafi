@@ -91,3 +91,25 @@
     }
   }
 }
+
+
+@media (max-width: 1280px) {
+  .hero-tags {
+    width: 380px;
+  }
+  .hero-search {
+    width: 380px;
+  }
+
+  .hero-content__title {
+    width: 380px;
+  }
+
+
+  .why-list__item {
+    width: calc(100% / 4 - 18px);
+  }
+  .why-list__item-title {
+    font-size: 20px;
+  }
+}
