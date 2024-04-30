@@ -1,0 +1,29 @@
+html
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./blog.css")
+
+
+  include ./blogVars.pug
+
+  block Variables
+
+  .container 
+    h1.page-title.blog__title Rafi insights 
+    .blog
+      each blogItem in blogItems 
+        a.blog-item(href="https://www.google.com")
+          img.blog-item__img(src=`${blogItem.image}`, alt="")
+          .blog-item__title #{blogItem.title} 
+          .blog-item__description #{blogItem.description} 
+    include ../../widgets/pagination/pagination.pug
+    +pagination('blog-pagination')
+
+
+
+
+  include ../../widgets/footer/footer.pug
+  script(src="blog.js" defer) 
+
+
+
+

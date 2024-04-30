@@ -1,0 +1,15 @@
+mixin pagination(extraClass) 
+  link(rel="stylesheet", href="../../widgets/pagination/pagination.css")
+  .pagination(class=`${extraClass || ''}`) 
+    //- button.pagination__btn Prev
+    button.pagination__item.active 1
+    button.pagination__item 2
+    button.pagination__item 3
+    button.pagination__item 4
+    button.pagination__item 5
+    button.pagination__item 6
+    button.pagination__item 7
+    button.pagination__item 8
+    button.pagination__item 9
+    button.pagination__item ...
+    button.pagination__btn Next
