@@ -2,6 +2,7 @@
   &advantages {
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
     &-item {
       display: flex;
       align-items: center;
@@ -78,6 +79,7 @@
 .partners {
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
   &-item {
     display: flex;
     align-items: center;
@@ -100,6 +102,114 @@
       font-size: 16px;
       font-weight: 400;
       text-align: center;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .partners-item {
+    width: calc(100% / 4 - 10px);
+  }
+  .partners-item__img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .partners-item__title {
+    font-size: 16px;
+  }
+
+  .partners-item__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jsuccess__title {
+    font-size: 20px;
+  }
+  .jsuccess__text {
+    font-size: 18px;
+  }
+  .partners {
+    flex-wrap: wrap;
+  }
+  .partners-item {
+    width: calc(50% - 20px);
+    margin-bottom: 16px;
+  }
+
+  .jready {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .jadvantages-item {
+    flex-direction: column;
+    &__why {
+      width: 100%;
+      margin-right: 0px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .jready__description {
+    margin-top: 16px;
+  }
+
+  .jready__btn {
+    width: 100%;
+    margin-top: 24px;
+    max-width: 100%;
+    height: 52px;
+    font-size: 16px;
+    padding: 0px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .jadvantages {
+    margin-top: 24px;
+  }
+
+  .jadvantages-item {
+    margin-bottom: 32px;
+  }
+  .jadvantages-item__why-item {
+    font-size: 18px;
+  }
+  .jadvantages-item__text {
+    font-size: 14px;
+  }
+  .jsuccess__title {
+    margin-top: 0px;
+  }
+
+  .partners__title {
+    text-align: center;
+  }
+
+  .partners-item {
+    width: 100%;
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &__img {
+      max-width: 140px;
+      max-height: 140px;
+    }
+    &__title {
+      text-align: center;
+      font-size: 18px;
+    }
+    &__description {
+      text-align: center;
+      font-size: 16px;
     }
   }
 }

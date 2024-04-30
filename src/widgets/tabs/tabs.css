@@ -33,4 +33,27 @@
 }
 .tab-content.active {
   display: block;
+}
+
+@media (max-width: 640px) {
+  .tabsLine__item {
+    padding: 0px 18px;
+  }
+}
+@media (max-width: 480px) {
+  .tabsLine {
+    height: 52px;
+    width: calc(100% + 32px);
+    transform: translateX(-16px);
+    overflow-x: auto;
+    border-radius: 0px;
+    margin-top: 32px;
+  }
+  .tabsLine__item {
+    font-size: 12px;
+  }
+  .tabsLine__item:first-child {
+    border-radius: 15px 0px 0px 15px;
+    margin-left: 16px;
+  }
 }/*# sourceMappingURL=tabs.css.map */

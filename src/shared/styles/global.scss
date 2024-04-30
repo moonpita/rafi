@@ -53,6 +53,7 @@ body {
   font-weight: 500;
   color: var(--black);
   line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .sec-title {
@@ -197,6 +198,7 @@ section,footer {
       font-weight: 500;
       line-height: 24px;
       transition: all .3s ease;
+      text-transform: uppercase;
     }
     &__description {
       font-size: 16px;
@@ -205,14 +207,19 @@ section,footer {
       margin-top: 16px;
       transition: all .3s ease;
     }
-    &:hover {
-      background: var(--red);
-      & .previl-item__title {
-        color: #fff;
-      }
-      & .previl-item__description {
-        color: #fff;
-      }
+   
+  }
+}
+
+// hover
+@media (min-width: 1025px) {
+  .previl-item:hover {
+    background: var(--red);
+    & .previl-item__title {
+      color: #fff;
+    }
+    & .previl-item__description {
+      color: #fff;
     }
   }
 }
@@ -274,6 +281,10 @@ section,footer {
   .together__title {
     font-size: 28px;
   }
+
+  .previl-item {
+    padding: 24px 20px;
+  }
   
 }
 
@@ -290,9 +301,20 @@ section,footer {
   .container {
     width: calc(100% - 32px);
   }
+
+  .previl-item {
+    width: 100%;
+    border-radius: 30px;
+    padding: 32px 20px;
+
+  }
 }
 
 @media (max-width: 480px) {
+
+  .page-title {
+    font-size: 28px;
+  }
 
   .btn {
     font-size: 16px;
