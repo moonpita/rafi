@@ -36,11 +36,13 @@ html
 
 
   include ../../widgets/products/products.pug
-  +productsSec('Projects', 'All projects', projects, 1)
-  +productsSec('Products', 'All products', products, 2)
+  div.tab-content.active(data-tab-base="companyTabs" data-tab-val="Projects") 
+    +productsSec('Projects', 'All projects', projects, 1)
+  div.tab-content.active(data-tab-base="companyTabs" data-tab-val="Products")
+    +productsSec('Products', 'All products', products, 2)
 
 
-  section.reviews-sec 
+  section.reviews-sec.tab-content.active(data-tab-base="companyTabs" data-tab-val="Customer Experiences") 
     .container 
       .products-top.reviews-top
         h2.sec-title.products__title Customer Experiences
@@ -61,7 +63,7 @@ html
                   span #{review.rank}
               p.review__text #{review.text}
                
-  section.ccontacts-sec 
+  section.ccontacts-sec.tab-content.active(data-tab-base="companyTabs" data-tab-val="Contacts")  
     .container 
       h2.sec-title.ccontacts__title 
       .ccontacts 
