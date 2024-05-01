@@ -246,6 +246,24 @@ section,footer {
 }
 
 
+.favorites-btn {
+  padding: 11px 21px;
+  display: flex;
+  align-items: center;
+  background: var(--greyBlue);
+  border-radius: 12px;
+  cursor: pointer;
+  &__img {
+    width: 24px;
+    height: 24px;
+    margin-right: 11px;
+  }
+  & span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
 
 
 // accordion

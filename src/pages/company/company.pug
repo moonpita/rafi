@@ -55,29 +55,44 @@ html
           each review in reviews
             .review.swiper-slide 
               .review-person 
-                img.review-person__img(src="./avatar.svg", alt="")
+                img.review-person__img(src="./img/avatar.svg", alt="")
                 .review-person__info 
                   div #{review.name}
                   span #{review.rank}
-              p.review-person__text #{review.text}
+              p.review__text #{review.text}
                
-  section.contacts-sec 
+  section.ccontacts-sec 
     .container 
-      h2.sec-title.contacts__title 
-      .contacts 
-        a.contacts__item(href="../")
-          img.contacts__item--img(src="./img/phone.svg", alt="")
+      h2.sec-title.ccontacts__title 
+      .ccontacts 
+        a.ccontacts__item(href="../")
+          img.ccontacts__item--img(src="./img/phone.svg", alt="")
           span +62 361 473 02 80
-        a.contacts__item(href="../")
-          img.contacts__item--img(src="./img/mail.svg", alt="")
+        a.ccontacts__item(href="../")
+          img.ccontacts__item--img(src="./img/mail.svg", alt="")
           span smartcompany@gmail.com
-        a.contacts__item(href="../")
-          img.contacts__item--img(src="./img/globe-alt.svg", alt="")
+        a.ccontacts__item(href="../")
+          img.ccontacts__item--img(src="./img/globe-alt.svg", alt="")
           span https://www.versal-msk.ru/
-        a.contacts__item(href="../")
-          img.contacts__item--img(src="./img/house-chimney-floor.svg", alt="")
+        a.ccontacts__item(href="../")
+          img.ccontacts__item--img(src="./img/house-chimney-floor.svg", alt="")
           span Canggu, Bali, 80361, Jl. Pantai Berawa, Canggu, Indonesia
 
+  section.related-sec 
+    .container 
+      .products-top.related-top
+        h2.sec-title.products__title Related Companies
+        .products-top-btns 
+          button(class=`products-top-btns__btn products-top-btns__prev related-prev`)
+            img.arrow(src="../../widgets/products/arrow-back.svg", alt="")
+          button(class=`products-top-btns__btn products-top-btns__next related-next`)
+            img.arrow(src="../../widgets/products/arrow-next.svg", alt="")
+      .swiper.related
+        .swiper-wrapper 
+          each related in relateds 
+            .related__item.swiper-slide 
+              img.related__item--img(src=`${related.image}`, alt="")
+              .related__item--title #{related.name}
   include ../../widgets/footer/footer.pug
 
   script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")

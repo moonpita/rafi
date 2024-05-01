@@ -46,5 +46,54 @@ const swiper2 = new Swiper('.products-slider-2', {
       slidesPerView: 3,
     }
   }
+});
 
+const swiper3 = new Swiper('.reviews-slider', {
+  loop: false,
+  spaceBetween: 21,
+  slidesPerView: 3,
+
+  navigation: {
+    nextEl: '.reviews-next',
+    prevEl: '.reviews-prev',
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+    481: {
+      slidesPerView: 2,
+    },
+    981: {
+      spaceBetween: 21,
+      slidesPerView: 3,
+    }
+  }
+});
+
+const swiper4 = new Swiper('.related', {
+  loop: false,
+  spaceBetween: 21,
+  slidesPerView: 3,
+
+  navigation: {
+    nextEl: '.related-next',
+    prevEl: '.related-prev',
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+    481: {
+      slidesPerView: 2,
+    },
+    981: {
+      spaceBetween: 21,
+      slidesPerView: 3,
+    }
+  }
 });
