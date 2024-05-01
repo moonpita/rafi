@@ -1,0 +1,101 @@
+.status-line {
+  display: flex;
+  align-items: center;
+  padding: 24px 0px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.status-line__photo {
+  width: 110px;
+}
+.status-line__photo img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.status-line__name {
+  width: 350px;
+  margin-right: auto;
+  font-size: 16px;
+}
+.status-line__name p {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
+}
+.status-line__status {
+  width: 230px;
+  margin-left: auto;
+}
+.status-line__status.checking p {
+  color: var(--grey);
+}
+.status-line__status.posted p {
+  color: #14AE5C;
+}
+.status-line__status.error {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.status-line__status.error p {
+  color: var(--red);
+  text-decoration: underline;
+}
+.status-line__status.error p {
+  margin-right: 14px;
+}
+.status-line__status.error img {
+  width: 30px;
+  height: 30px;
+}
+.status-header {
+  padding: 0px 0px 16px 0px;
+}
+.status-header > * {
+  color: var(--grey);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 980px) {
+  .status-line__name {
+    width: 220px;
+  }
+  .status-line__status {
+    width: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .status-line__photo img {
+    width: 48px;
+    height: 48px;
+  }
+  .status-line {
+    padding: 16px 0px;
+  }
+  .status-header {
+    padding: 0px 0px 8px 0px;
+  }
+  .status-line * {
+    font-size: 12px;
+  }
+  .status-line__photo {
+    width: 60px;
+  }
+  .status-line__name {
+    width: 160px;
+  }
+  .status-line__status {
+    width: 110px;
+  }
+  .status-line__status.error img {
+    display: none;
+  }
+}/*# sourceMappingURL=status.css.map */

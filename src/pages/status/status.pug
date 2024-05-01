@@ -1,0 +1,48 @@
+html
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./status.css")
+
+  block Variables
+
+  .container 
+    .status 
+      .status-header.status-line 
+        .status-line__photo Photo 
+        .status-line__name Name
+        .status-line__status Status
+      .status-line 
+        .status-line__photo
+          img(src="../../pages/status/img/abc.jpg" alt="")
+        .status-line__name
+          p Lorem ipsum dolor sit amet.
+        .status-line__status.checking
+          p Under consideration
+      .status-line 
+        .status-line__photo
+          img(src="../../pages/status/img/abc.jpg" alt="")
+        .status-line__name
+          p Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, dolores!
+        .status-line__status.posted
+          p Posted
+      .status-line 
+        .status-line__photo
+          img(src="../../pages/status/img/abc.jpg" alt="")
+        .status-line__name
+          p Lorem ipsum dolor sit amet.
+        .status-line__status.error
+          p Placement errors
+          img(src="../../pages/status/img/questionmark.svg" alt="")
+
+  section.doYouNeedHelp-sec 
+    .container 
+      .doYouNeedHelp 
+        .doYouNeedHelp__title Do you need help?
+        button.btn.doYouNeedHelp__btn Ask question 
+
+
+
+  include ../../widgets/footer/footer.pug
+
+
+
+

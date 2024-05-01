@@ -1,0 +1,89 @@
+html
+
+  include ./companyVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+  link(rel="stylesheet" href="./company.css")
+
+
+  block Variables
+
+  .container 
+    .company
+      img.company__image(src="./img/company.svg", alt="")
+      .company-content
+        .company-badges 
+          .company-badges__item 
+            img.company-badges__item--img(src="./img/badge-1.svg", alt="")
+          .company-badges__item 
+            img.company-badges__item--img(src="./img/badge-2.svg", alt="")
+          .company-badges__item 
+            img.company-badges__item--img(src="./img/badge-3.svg", alt="")
+          .company-badges__item 
+            img.company-badges__item--img(src="./img/badge-4.svg", alt="")
+          .company-badges__item 
+            img.company-badges__item--img(src="./img/badge-5.svg", alt="")
+          .company-badges__item
+            img.company-badges__item--img(src="./img/badge-6.svg", alt="")
+        h1.page-title.company__title Company name 
+        p.company__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        button.favorites-btn.company__favorites 
+          img.favorites-btn__img.company__favorites--img(src="./img/star.svg", alt="")
+          span Add to favorites
+
+    include ../../widgets/tabs/tabs.pug
+    +tabsLine(tabs)
+
+
+  include ../../widgets/products/products.pug
+  +productsSec('Projects', 'All projects', projects, 1)
+  +productsSec('Products', 'All products', products, 2)
+
+
+  section.reviews-sec 
+    .container 
+      .products-top.reviews-top
+        h2.sec-title.products__title Customer Experiences
+        button.reviews-top__write Write a review
+        .products-top-btns 
+          button(class=`products-top-btns__btn products-top-btns__prev reviews-prev`)
+            img.arrow(src="../../widgets/products/arrow-back.svg", alt="")
+          button(class=`products-top-btns__btn products-top-btns__next reviews-next`)
+            img.arrow(src="../../widgets/products/arrow-next.svg", alt="")
+      div(class=`reviews swiper reviews-slider`) 
+        .swiper-wrapper 
+          each review in reviews
+            .review.swiper-slide 
+              .review-person 
+                img.review-person__img(src="./avatar.svg", alt="")
+                .review-person__info 
+                  div #{review.name}
+                  span #{review.rank}
+              p.review-person__text #{review.text}
+               
+  section.contacts-sec 
+    .container 
+      h2.sec-title.contacts__title 
+      .contacts 
+        a.contacts__item(href="../")
+          img.contacts__item--img(src="./img/phone.svg", alt="")
+          span +62 361 473 02 80
+        a.contacts__item(href="../")
+          img.contacts__item--img(src="./img/mail.svg", alt="")
+          span smartcompany@gmail.com
+        a.contacts__item(href="../")
+          img.contacts__item--img(src="./img/globe-alt.svg", alt="")
+          span https://www.versal-msk.ru/
+        a.contacts__item(href="../")
+          img.contacts__item--img(src="./img/house-chimney-floor.svg", alt="")
+          span Canggu, Bali, 80361, Jl. Pantai Berawa, Canggu, Indonesia
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+  script(src="../../shared/lib/tabs.js" defer) 
+  script(src="./company.js" defer) 
+
+
+
+
