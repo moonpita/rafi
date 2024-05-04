@@ -1,0 +1,22 @@
+html
+
+  include ./favoritesVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./favorites.css")
+
+
+  block Variables
+
+  .container 
+    h1.page-title.ffavorites__title Favorites 
+    .ffavorites.empty 
+      h2.ffavorites__empty You haven't added anything to your favorites yet
+      
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="./favorites.js" defer) 
+
+
+
+

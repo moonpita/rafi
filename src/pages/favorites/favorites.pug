@@ -1,0 +1,32 @@
+html
+
+  include ./favoritesVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./favorites.css")
+
+
+  block Variables
+
+  .container 
+    h1.page-title.ffavorites__title Favorites 
+    .ffavorites 
+      each favorite in projects 
+         .product.ffavorites__item
+            button.ffavorites__item--btn.fav-btn.active
+              img(src="../../shared/img/starBlack.svg", alt="")
+            img.product__image(src=`${favorite.image}`, alt="")
+            span.product__type #{favorite.type}
+            div.product__title #{favorite.title}
+            p.product__description #{favorite.description}
+
+
+  include ../../widgets/pagination/pagination.pug
+  +pagination()
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="./favorites.js" defer) 
+
+
+
+

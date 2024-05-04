@@ -265,6 +265,16 @@ section,footer {
   }
 }
 
+.fav-btn {
+  & img {
+    transition: all .3s ease;
+    filter: invert(21%) sepia(0%) saturate(1%) hue-rotate(95deg) brightness(94%) contrast(85%);
+  }
+  &.active img {
+    filter: invert(71%) sepia(79%) saturate(566%) hue-rotate(358deg) brightness(100%) contrast(105%);
+  }
+}
+
 
 // accordion
 
