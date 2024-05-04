@@ -46,7 +46,7 @@ html
     .container 
       .products-top.reviews-top
         h2.sec-title.products__title Customer Experiences
-        button.reviews-top__write Write a review
+        button.reviews-top__write.desk Write a review
         .products-top-btns 
           button(class=`products-top-btns__btn products-top-btns__prev reviews-prev`)
             img.arrow(src="../../widgets/products/arrow-back.svg", alt="")
@@ -62,10 +62,11 @@ html
                   div #{review.name}
                   span #{review.rank}
               p.review__text #{review.text}
+      button.reviews-top__write.mob Write a review
                
   section.ccontacts-sec.tab-content.active(data-tab-base="companyTabs" data-tab-val="Contacts")  
     .container 
-      h2.sec-title.ccontacts__title 
+      h2.sec-title.ccontacts__title Contacts
       .ccontacts 
         a.ccontacts__item(href="../")
           img.ccontacts__item--img(src="./img/phone.svg", alt="")

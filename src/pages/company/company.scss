@@ -24,7 +24,7 @@
         height: 100%;
         object-fit: contain;
       }
-      &:not(:first-child) {
+      &:not(:last-child) {
         margin-right: 30px;
       }  
     }
@@ -90,6 +90,7 @@
         font-weight: 500;
       }
       & span {
+
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -112,6 +113,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 40px;
   &__item {
     width: calc((100% - 44px) / 3);
     background: var(--greyBlue);
@@ -125,6 +127,8 @@
       margin-right: 19px;
     }
     & span {
+      display: flex;
+      align-items: center;
       font-size: 20px;
       font-weight: 500;
       line-height: 1.1;
@@ -157,5 +161,127 @@
       text-align: center;
       margin-top: auto;
     }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .company-content {
+    padding-top: 60px;
+  }
+  .ccontacts__item span {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 980px) {
+  .company {
+    flex-direction: column;
+  }
+
+  .company-content {
+    padding-top: 0px;
+    margin-top: 20px;
+  }
+
+  .company__title {
+    width: 100%;
+    max-width: 100%;
+  }
+  .company__description {
+    width: 100%;
+    max-width: 100%;
+  }
+  .ccontacts__item span {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  .reviews-top__write {
+    padding: 0px 20px;
+    text-align: center;
+    margin-right: 12px;
+  }
+}
+.reviews-top__write.mob {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .reviews-top__write.desk  {
+    display: none;
+  }
+  .reviews-top__write.mob  {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  .company__image {
+    width: 60%;
+    max-width: 60%;
+  }
+  .company-content {
+    position: static;
+  }
+  .company {
+    position: relative;
+  }
+
+  .favorites-btn{
+    padding: 6px 12px
+  }
+
+  .favorites-btn span{
+    font-size: 12px;
+  }
+  .favorites-btn__img{
+    width: 16px;
+    height: 16px;
+  }
+  .company-badges__item:not(:last-child) {
+    margin-right: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .products, .reviews, .related {
+    width: 100vw;
+    padding-left: 20px;
+    padding-right: 80px;
+    transform: translateX(-20px);
+  }
+  .company__description {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+  .ccontacts__item{
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  .ccontacts__item:last-child {
+    margin-top: 0px;
+  }
+
+  .ccontacts {
+    margin-top: 24px;
+  }
+  .ccontacts__item span{
+    font-size: 14px;
+  }
+  .ccontacts__item--img {
+    width: 17px;
+    height: 17px;
+    margin-right: 17px;
+  }
+
+  .related__item{
+    padding: 30px;
+  }
+  .related__item--title {
+    margin-top: 15px;
   }
 }
