@@ -23,16 +23,6 @@
   }
 }
 
-.tabs__item {
-  cursor: pointer;
-}
-
-.tab-content {
-  display: none;
-  &.active {
-    display: block;
-  }
-}
 
 @media (max-width: 640px) {
   

@@ -329,6 +329,17 @@ section, footer {
   filter: invert(71%) sepia(79%) saturate(566%) hue-rotate(358deg) brightness(100%) contrast(105%);
 }
 
+.tabs__item {
+  cursor: pointer;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
 .acc-panel {
   overflow: hidden;
   max-height: 0px;

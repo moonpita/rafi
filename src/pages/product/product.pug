@@ -1,0 +1,156 @@
+html
+
+  include ./productVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+  link(rel="stylesheet" href="./product.css")
+
+
+  block Variables
+
+  .pproduct-sec
+    .container 
+      .pproduct 
+        .pproduct-left 
+          .swiper.pproductSwiper__thumb 
+            .swiper-wrapper 
+              .pproductSwiper__thumb-slide.swiper-slide 
+                img(src="./img/product-1.jpg", alt="")
+              .pproductSwiper__thumb-slide.swiper-slide 
+                img(src="./img/product-2.jpg", alt="")
+              .pproductSwiper__thumb-slide.swiper-slide 
+                img(src="./img/product-3.jpg", alt="")
+              .pproductSwiper__thumb-slide.swiper-slide 
+                img(src="./img/product-4.jpg", alt="")
+              .pproductSwiper__thumb-slide.swiper-slide 
+                img(src="./img/product-5.jpg", alt="")
+              .pproductSwiper__thumb-slide.swiper-slide 
+                img(src="./img/product-1.jpg", alt="")
+              .pproductSwiper__thumb-slide.swiper-slide 
+                img(src="./img/product-2.jpg", alt="")
+              .pproductSwiper__thumb-slide.swiper-slide 
+                img(src="./img/product-3.jpg", alt="")
+          .swiper.pproductSwiper__main 
+            .swiper-wrapper 
+              .pproductSwiper__main-slide.swiper-slide 
+                img(src="./img/product-1.jpg", alt="")
+              .pproductSwiper__main-slide.swiper-slide 
+                img(src="./img/product-2.jpg", alt="")
+              .pproductSwiper__main-slide.swiper-slide 
+                img(src="./img/product-3.jpg", alt="")
+              .pproductSwiper__main-slide.swiper-slide 
+                img(src="./img/product-4.jpg", alt="")
+              .pproductSwiper__main-slide.swiper-slide 
+                img(src="./img/product-5.jpg", alt="")
+              .pproductSwiper__main-slide.swiper-slide 
+                img(src="./img/product-1.jpg", alt="")
+              .pproductSwiper__main-slide.swiper-slide 
+                img(src="./img/product-2.jpg", alt="")
+              .pproductSwiper__main-slide.swiper-slide 
+                img(src="./img/product-3.jpg", alt="")
+          .product-pagination.swiper-pagination
+
+        .pproduct-content 
+          .pproduct-top 
+            h1.page-title.pproduct__title kudo spray paint 
+            button.favorites-btn.fav-btn.pproduct__favorites 
+              img.favorites-btn__img.pproduct__favorites--img(src="../../shared/img/starBlack.svg", alt="")
+              span Add to favorites
+          .pproduct-stats 
+            .pproduct-stats__item 
+              div Type
+              span Spray paint
+            .pproduct-stats__item 
+              div Work
+              span Indoor, Outdoor
+            .pproduct-stats__item 
+              div Color
+              span Black, RAL 9005.
+            .pproduct-stats__item 
+              div Type of paint
+              span Quick-drying
+            .pproduct-stats__item 
+              div Volume, I
+              span 0.52
+            .pproduct-stats__item 
+              div Type
+              span Spray paint
+            .pproduct-stats__item 
+              div Work
+              span Indoor, Outdoor
+            .pproduct-stats__item 
+              div Color
+              span Black, RAL 9005.
+            .pproduct-stats__item 
+              div Type of paint
+              span Quick-drying
+            .pproduct-stats__item 
+              div Volume, I
+              span 0.52
+
+  .container 
+    .pproduct-info 
+      .pproduct-info-tabs
+        button.pproduct-info-tabs__btn.tabs__item.active(data-tab-base="productInfo" data-tab-val="description") Description
+        button.pproduct-info-tabs__btn.tabs__item(data-tab-base="productInfo" data-tab-val="specs") Specification
+        button.fav-btn.pproduct-info-tabs__favorites
+          img(src="../../shared/img/starBlack.svg", alt="")
+      .tab-content.active(data-tab-base="productInfo" data-tab-val="description")
+        .pproduct-info__description 
+          | High-quality quick-drying premium enamel mirror metallic KUDO ® with an updated formula is designed for decorative painting of metal, wood, plastic, gypsum and ceramic surfaces.<br><br>
+          | It has a bright and rich metallic luster. Spray paint can be easily applied to hard-to-reach surfaces. The enamel gives an excellent visual effect, but does not have a very high abrasion resistance (more details in the application). It is used for interior work.<br><br>
+          | Application 
+          | <ul>
+          |   <li>To avoid aerosol traces, it is recommended to protect surfaces that are not subject to painting.</li>
+          |   <li>For best results, apply the enamel at an ambient temperature of at least +10 ° C.</li>
+          |   <li>Shake the balloon vigorously for 2-3 minutes before use.</li>
+          |   <li>The enamel is applied to a clean, dry and non-greasy surface. To achieve the best results and obtain a more durable coating, it is recommended to apply enamel on pre-primed surfaces. </li>
+          |   <li>It is recommended to use "KUDO ® acrylic primer" for priming the surface. The enamel is applied from a distance of 25-30 cm in 1-2 layers with intermediate drying for 10 minutes at a temperature of + 20 ° C. The drying time "for peeling" at a temperature of +20 ° C is 15-20 minutes. The time of complete drying at a temperature of +20 ° C is 2 hours.</li>
+          |   <li>It is not recommended to apply enamel on surfaces that are subjected to regular mechanical stress. Applying varnish over enamel reduces the decorative effect of the coating.</li>
+          |
+          | </ul>
+          | Attention! At the end of the work, in order to avoid clogging of the spray head, turn the cylinder upside down and spray until the enamel stops flowing.
+      .tab-content(data-tab-base="productInfo" data-tab-val="specs")
+        .pproduct-info__stats 
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Type
+            span Spray paint
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Work
+            span Indoor, Outdoor
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Color
+            span Black, RAL 9005.
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Type of paint
+            span Quick-drying
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Volume, I
+            span 0.52
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Type
+            span Spray paint
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Work
+            span Indoor, Outdoor
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Color
+            span Black, RAL 9005.
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Type of paint
+            span Quick-drying
+          .pproduct-stats__item.pproduct-info__stats--item 
+            div Volume, I
+            span 0.52
+
+  
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+  script(src="../../shared/lib/tabs.js") 
+  script(src="./product.js" defer) 
+
+
+
+

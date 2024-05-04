@@ -24,17 +24,6 @@
   color: #fff;
 }
 
-.tabs__item {
-  cursor: pointer;
-}
-
-.tab-content {
-  display: none;
-}
-.tab-content.active {
-  display: block;
-}
-
 @media (max-width: 640px) {
   .tabsLine__item {
     padding: 0px 18px;

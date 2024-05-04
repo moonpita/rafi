@@ -265,6 +265,7 @@ section,footer {
   }
 }
 
+
 .fav-btn {
   & img {
     transition: all .3s ease;
@@ -272,6 +273,16 @@ section,footer {
   }
   &.active img {
     filter: invert(71%) sepia(79%) saturate(566%) hue-rotate(358deg) brightness(100%) contrast(105%);
+  }
+}
+.tabs__item {
+  cursor: pointer;
+}
+
+.tab-content {
+  display: none;
+  &.active {
+    display: block;
   }
 }
 
