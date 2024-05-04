@@ -464,4 +464,19 @@ section,footer {
     }
   }
 
+
+  .favorites-btn{
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .favorites-btn span{
+    display: none;
+  }
+  .favorites-btn__img{
+    width: 13px;
+    height: 13px;
+    margin: 0px;
+  }
+
 }

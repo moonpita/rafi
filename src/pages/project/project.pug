@@ -1,0 +1,56 @@
+html
+
+  include ./projectVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+  link(rel="stylesheet" href="./project.css")
+
+
+  block Variables
+
+  .container 
+    .pproject 
+      h1.page-title.pproject__title Kefir Volgograd 
+      p.pproject__description The goal was to create a headquarters, a single company center with significant space for recreation and reception of guests. The main task that the architects faced when designing the office was to place all employees in a new building with a reserve of places for the future. The company's activities are related to the development of computer games, so the office environment is designed to maintain an atmosphere of creativity and inspiration.
+      img.pproject__image.desk(src="./img/hero.png", alt="")
+      img.pproject__image.mob(src="./img/heroMob.png", alt="")
+      button.favorites-btn.pproject__favorites 
+        img.favorites-btn__img.pproject__favorites--img(src="./img/star.svg", alt="")
+        span Add to favorites
+  
+  section.photos-sec 
+    .container 
+      .products-top.photos-top
+        h2.sec-title.products__title photos
+        .products-top-btns 
+          button(class=`products-top-btns__btn products-top-btns__prev photos-prev`)
+            img.arrow(src="../../widgets/products/arrow-back.svg", alt="")
+          button(class=`products-top-btns__btn products-top-btns__next photos-next`)
+            img.arrow(src="../../widgets/products/arrow-next.svg", alt="")
+      .swiper.photos
+        .swiper-wrapper 
+          each photo in imageSlides 
+            .photos__item.swiper-slide 
+              img.photos__item--img(src=`${photo.image}`, alt="")
+  
+  section.ptext-sec 
+    .container 
+      .ptext 
+        h2.sec-title.ptext__title Text block 
+        p.ptext__description The goal was to create a headquarters, a single company center with significant space for recreation and reception of guests. The main task that the architects faced when designing the office was to place all employees in a new building with a reserve of places for the future. The company's activities are related to the development of computer games, so the office environment is designed to maintain an atmosphere of creativity and inspiration.
+        h3.ptext__subtitle The goal was to create 
+        p.ptext__description The goal was to create a headquarters, a single company center with significant space for recreation and reception of guests. The main task that the architects faced when designing the office was to place all employees in a new building with a reserve of places for the future. The company's activities are related to the development of computer games, so the office environment is designed to maintain an atmosphere of creativity and inspiration.
+
+  include ../../widgets/products/products.pug
+  +productsSec('Projects', 'All projects', projects, 2)
+
+  include ../../widgets/newHeights/newHeights.pug
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+  script(src="./project.js" defer) 
+
+
+
+
