@@ -1,0 +1,5 @@
+mixin imageInput(name) 
+  .imageInput 
+    input.imageInput__field.input--field(type="file" name=name id=name multiple)
+    label.imageInput__label(for=name) 
+      img.imageInput__label--cross(src="../../shared/img/redCross.svg", alt="")

@@ -1,0 +1,47 @@
+html
+
+  include ./authVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./auth.css")
+
+
+  include ../../shared/ui/inputs/textInput.pug
+  include ../../shared/ui/inputs/dropdownInput.pug
+  include ../../shared/ui/inputs/dropdownWithSearch.pug
+  include ../../shared/ui/inputs/imageInput.pug
+
+  block Variables
+
+  .container 
+    h1.page-title.signup__title Join rafi 
+    form.auth-form.signup-form
+      .auth-row.input-row 
+        .auth-row__name.input-row__name Company name 
+        +textInput('companyName', true, 'Company name')
+      .auth-row.input-row
+        .auth-row__name.input-row__name Who are you?
+        +dropdownInput('WhoAreYou', true, 'Select here')
+      .auth-row.input-row
+        .auth-row__name.input-row__name Field
+        div.many-choice
+          +dropdownInput('Field', true, 'Select ')
+          +dropdownInput('Field2', true, 'Select 2')
+          +dropdownInput('Field3', true, 'Select 3')
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div Upload licenses
+        +imageInput('licenses')
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div Website (optional)
+        +textInput('Website', false, 'https://website.org')
+
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="../../shared/lib/inputsController.js" defer) 
+  script(src="./auth.js" defer) 
+
+
+
+

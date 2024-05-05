@@ -1,0 +1,19 @@
+mixin dropdownInput(name, required, placeholder)
+  .dropdownInput.input
+    input.dropdownInput__hidden.input--field(type="text" name=name required=`${required || false}`)
+    .dropdownInput__btn 
+      .dropdownInput__btn--preview #{placeholder || ''} 
+      img.dropdownInput__btn--arrow(src="../../shared/img/rightArrow.svg", alt="")
+    .dropdownInput__panel 
+      .dropdownInput__panel--item(data-value="1") Construction/general contractor
+      .dropdownInput__panel--item(data-value="2") contractor
+      .dropdownInput__panel--item(data-value="3") Architectural and interior design
+      .dropdownInput__panel--item(data-value="4") Roofing and Gutter contractors
+      .dropdownInput__panel--item(data-value="5") Construction/general contractor
+      .dropdownInput__panel--item(data-value="6") contractor
+      .dropdownInput__panel--item(data-value="7") Architectural and interior design
+      .dropdownInput__panel--item(data-value="8") Roofing and Gutter contractors
+      .dropdownInput__panel--item(data-value="9") Construction/general contractor
+      .dropdownInput__panel--item(data-value="10") contractor
+      .dropdownInput__panel--item(data-value="11") Architectural and interior design
+      .dropdownInput__panel--item(data-value="12") Roofing and Gutter contractors

@@ -1,0 +1,3 @@
+mixin textInput(name, required, placeholder)
+  .input.input__text
+    input.input__text--field.input--field(type="text", name=name placeholder=`${placeholder || ''}` required=`${required || false}`)
