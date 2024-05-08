@@ -1,0 +1,41 @@
+html
+
+  include ./authVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./auth.css")
+
+
+  include ../../shared/ui/inputs/textInput.pug
+  include ../../shared/ui/inputs/dropdownInput.pug
+  include ../../shared/ui/inputs/dropdownWithSearch.pug
+  include ../../shared/ui/inputs/imageInput.pug
+  include ../../shared/ui/inputs/textAreaInput.pug
+  include ../../shared/ui/inputs/checkboxInput.pug
+
+  block Variables
+
+  .container 
+    h1.page-title.signup__title Join rafi 
+    form.auth-form.signup-form
+      .auth-row.input-row 
+        .auth-row__name.input-row__name New password
+        +textInput('password', true, '********* ')
+      .auth-row.input-row 
+        .auth-row__name.input-row__name Confirm password
+        +textInput('confirm', true, '*********')
+     
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div 
+        .auth-row__content.submit-content
+          button.btn.auth__submit Change password
+
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="../../shared/lib/inputsController.js" defer) 
+  script(src="./auth.js" defer) 
+
+
+
+

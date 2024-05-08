@@ -4,7 +4,6 @@
 
 
 .auth {
-
   &-form {
     margin-top: 40px;
   }
@@ -16,7 +15,44 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  &-forgot-link {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &-dont-have {
+    display: block;
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--grey);
+  }
+  &-policy {
+    display: block;
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey);
+    & a {
+      font-size: inherit;
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
 }
+
+.auth-row__content.subtext {
+  margin-top: -10px !important;
+  & * {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--grey);
+
+  }
+}
+
 
 @media (max-width: 1280px) {
   .input-row > *:nth-child(2) {
@@ -63,5 +99,28 @@
 
   .auth-form {
     margin-top: 24px;
+  }
+  
+}
+
+
+@media (max-width: 640px) {
+  .auth-forgot-link {
+    font-size: 14px;
+  }
+  .auth-dont-have{
+    font-size: 14px;
+  }
+  .auth-policy {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .auth-row__content.subtext {
+    margin-top: -20px !important;
+    line-height: 1.2;
+  }
+  .auth-row__content.subtext * {
+    font-size: 14px;
   }
 }

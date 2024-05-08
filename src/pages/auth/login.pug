@@ -1,0 +1,52 @@
+html
+
+  include ./authVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./auth.css")
+
+
+  include ../../shared/ui/inputs/textInput.pug
+  include ../../shared/ui/inputs/dropdownInput.pug
+  include ../../shared/ui/inputs/dropdownWithSearch.pug
+  include ../../shared/ui/inputs/imageInput.pug
+  include ../../shared/ui/inputs/textAreaInput.pug
+  include ../../shared/ui/inputs/checkboxInput.pug
+
+  block Variables
+
+  .container 
+    h1.page-title.signup__title Join rafi 
+    form.auth-form.signup-form
+      .auth-row.input-row 
+        .auth-row__name.input-row__name Email
+        +textInput('Email', true, 'Email ')
+      .auth-row.input-row 
+        .auth-row__name.input-row__name Password
+        +textInput('password', true, '*********')
+     
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div 
+        +checkboxInput('remember', false, 'remember', 'Remember me')
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div 
+        .auth-row__content.submit-content
+          button.btn.auth__submit Log in
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div 
+        .auth-row__content.info-content
+          a.auth-forgot-link(href="./forgot.html") Forgot your password? 
+          a.auth-dont-have(href="./forgot.html") Don't have an account? Sign up now!
+          p.auth-policy While registering, logging in, or continuing, I agree to the <a href="">Rafi Terms</a> of Use and accept the <a href="./">Rafi Privacy Policy</a>. I consent to Rafi using my email address for marketing purposes. I can opt out at any time through <a href="./">my settings</a>
+
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="../../shared/lib/inputsController.js" defer) 
+  script(src="./auth.js" defer) 
+
+
+
+
