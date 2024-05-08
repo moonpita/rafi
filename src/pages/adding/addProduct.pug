@@ -2,7 +2,7 @@ html
 
   include ./authVars.pug
   include ../../widgets/header/header.pug
-  link(rel="stylesheet" href="./auth.css")
+  link(rel="stylesheet" href="./adding.css")
 
 
   include ../../shared/ui/inputs/textInput.pug
@@ -16,47 +16,47 @@ html
 
   .container 
     h1.page-title.signup__title Join rafi 
-    form.fillForm-form.signup-form
-      .fillForm-row.input-row 
-        .fillForm-row__name.input-row__name Company name 
+    form.auth-form.signup-form
+      .auth-row.input-row 
+        .auth-row__name.input-row__name Company name 
         +textInput('companyName', true, 'Company name')
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name Who are you?
+      .auth-row.input-row
+        .auth-row__name.input-row__name Who are you?
         +dropdownInput('WhoAreYou', true, 'Select here')
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name Field
+      .auth-row.input-row
+        .auth-row__name.input-row__name Field
         div.many-choice
           +dropdownInput('Field', true, 'Select ')
           +dropdownInput('Field2', true, 'Select 2')
           +dropdownInput('Field3', true, 'Select 3')
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name
+      .auth-row.input-row
+        .auth-row__name.input-row__name
           div Upload licenses
         +imageInput('licenses')
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name
+      .auth-row.input-row
+        .auth-row__name.input-row__name
           div Website (optional)
         +textInput('Website', false, 'https://website.org')
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name
+      .auth-row.input-row
+        .auth-row__name.input-row__name
           div Additional information (optional)
         +textArea('textArea', 'textttt', false)
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name
+      .auth-row.input-row
+        .auth-row__name.input-row__name
           div 
         +checkboxInput('personal', true, 'personal', 'I consent to the processing of personal data')
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name
+      .auth-row.input-row
+        .auth-row__name.input-row__name
           div 
         +checkboxInput('personal', true, 'personal2', 'I am familiar with the privacy policy')
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name
+      .auth-row.input-row
+        .auth-row__name.input-row__name
           div 
         +checkboxInput('personal', false, 'personal3', 'I want to receive Rafi newsletters')
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name
+      .auth-row.input-row
+        .auth-row__name.input-row__name
           div 
-        .fillForm-row__content.submit-content
+        .auth-row__content.submit-content
           button.btn.fillForm__submit Submit
 
 
@@ -64,7 +64,7 @@ html
   include ../../widgets/footer/footer.pug
 
   script(src="../../shared/lib/inputsController.js" defer) 
-  script(src="./auth.js" defer) 
+  script(src="./adding.js" defer) 
 
 
 

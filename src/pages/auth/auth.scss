@@ -1,20 +1,4 @@
-.many-choice > * {
-  margin-bottom: 30px;
-}
-
-
 .auth {
-  &-form {
-    margin-top: 40px;
-  }
-
-  &__submit {
-    margin-right: auto;
-    padding: 13px 110px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &-forgot-link {
     display: block;
@@ -42,67 +26,6 @@
   }
 }
 
-.auth-row__content.subtext {
-  margin-top: -10px !important;
-  & * {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-    color: var(--grey);
-
-  }
-}
-
-
-@media (max-width: 1280px) {
-  .input-row > *:nth-child(2) {
-    width: 500px;
-    min-width: 500px;
-  }
-}
-
-@media (max-width: 980px) {
-  .auth-row {
-    margin-bottom: 16px;
-  }
-  .many-choice > * {
-    margin-bottom: 16px;
-  }
-
-  .input-row > *:nth-child(2) {
-    width: 360px;
-    min-width: 360px;
-  }
-} 
-
-@media (max-width: 768px) {
-  .auth-row {
-    flex-direction: column;
-    margin-bottom: 27px;
-  }
-  .input-row > *:nth-child(2) {
-    width: 100%;
-    min-width: 100%;
-    margin-left: 0px;
-    margin-top: 16px;
-  }
-  .input-row__name {
-    margin-top: 0px;
-  }
-
-  .input__checkbox {
-    margin: 0px !important;
-    &__name {
-      margin-top: 0px !important;
-    }
-  }
-
-  .auth-form {
-    margin-top: 24px;
-  }
-  
-}
-
 
 @media (max-width: 640px) {
   .auth-forgot-link {
@@ -116,11 +39,4 @@
     margin-top: 8px;
   }
 
-  .auth-row__content.subtext {
-    margin-top: -20px !important;
-    line-height: 1.2;
-  }
-  .auth-row__content.subtext * {
-    font-size: 14px;
-  }
 }

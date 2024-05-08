@@ -15,23 +15,23 @@ html
   block Variables
 
   .container 
-    h1.page-title.signup__title Join rafi 
-    form.auth-form.signup-form
-      .auth-row.input-row 
-        .auth-row__name.input-row__name Email
+    h1.page-title.forgot__title Join rafi 
+    form.fillForm-form.forgot-form
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name Email
         +textInput('Email', true, 'Email ')
      
-      .auth-row.input-row
-        .auth-row__name.input-row__name
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
           div 
-        .auth-row__content.subtext 
+        .fillForm-row__content.subtext 
           span We will send an email about password change to your inbox
   
-      .auth-row.input-row
-        .auth-row__name.input-row__name
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
           div 
-        .auth-row__content.submit-content
-          button.btn.auth__submit Send
+        .fillForm-row__content.submit-content
+          button.btn.fillForm__submit Send
 
 
   include ../../widgets/footer/footer.pug

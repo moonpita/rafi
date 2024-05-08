@@ -15,20 +15,20 @@ html
   block Variables
 
   .container 
-    h1.page-title.signup__title Join rafi 
-    form.auth-form.signup-form
-      .auth-row.input-row 
-        .auth-row__name.input-row__name New password
+    h1.page-title.change__title Join rafi 
+    form.fillForm-form.change-form
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name New password
         +textInput('password', true, '********* ')
-      .auth-row.input-row 
-        .auth-row__name.input-row__name Confirm password
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name Confirm password
         +textInput('confirm', true, '*********')
      
-      .auth-row.input-row
-        .auth-row__name.input-row__name
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
           div 
-        .auth-row__content.submit-content
-          button.btn.auth__submit Change password
+        .fillForm-row__content.submit-content
+          button.btn.fillForm__submit Change password
 
 
   include ../../widgets/footer/footer.pug

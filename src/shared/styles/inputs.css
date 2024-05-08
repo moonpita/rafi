@@ -1,1 +1,340 @@
-/*# sourceMappingURL=inputs.css.map */
+.input-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.input-row__name {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+  max-width: 300px;
+  margin-top: 18px;
+}
+.input-row__name div {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+  max-width: 300px;
+}
+.input-row > *:nth-child(2) {
+  width: 763px;
+  min-width: 763px;
+  margin-left: 40px;
+}
+.input__text {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: var(--greyBlue);
+  border-radius: 15px;
+}
+.input__text--field {
+  padding: 0px 39px;
+  font-size: 20px;
+  line-height: 1.2;
+  width: 100%;
+  height: 100%;
+}
+
+.dropdownInput {
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: auto;
+}
+.dropdownInput.active .dropdownInput__btn {
+  border-bottom: 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+.dropdownInput.active .dropdownInput__btn--arrow {
+  transform: rotate(90deg);
+}
+.dropdownInput.active .dropdownInput__btn--preview {
+  color: var(--red);
+}
+.dropdownInput.active .dropdownInput__panel {
+  border-color: #e4e4e4;
+  transform: none;
+}
+.dropdownInput__hidden {
+  display: none;
+}
+.dropdownInput__btn {
+  width: 100%;
+  height: 100%;
+  height: 60px;
+  min-height: 100%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0px 39px;
+  border: 1px solid #e4e4e4;
+  transition: all 0.3s ease;
+  z-index: 20;
+  position: relative;
+  cursor: pointer;
+}
+.dropdownInput__btn--arrow {
+  transition: all 0.3s ease;
+}
+.dropdownInput__btn--preview {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+.dropdownInput__panel {
+  width: 100%;
+  background: #fff;
+  border: 1px solid transparent;
+  border-top: 0px;
+  padding: 0px 39px;
+  transition: all 0.3s ease;
+  max-height: 0px;
+  overflow: hidden;
+  border-radius: 0px 0px 15px 15px;
+  transform: translateY(-20px);
+  z-index: 10;
+}
+.dropdownInput__panel--item {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.imageInput {
+  display: flex;
+  flex-wrap: wrap;
+}
+.imageInput .new-photo {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.imageInput .new-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.imageInput__field {
+  display: none;
+}
+.imageInput__label {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--greyBlue);
+  border-radius: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.imageInput__label img {
+  width: 22px;
+  height: 22px;
+}
+
+.input__textArea {
+  height: 181px;
+  background: var(--greyBlue);
+  border-radius: 15px;
+}
+.input__textArea--field {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px 39px;
+}
+
+.input__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.input__checkbox--field {
+  display: none;
+}
+.input__checkbox--label {
+  position: relative;
+  padding-left: 48px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.input__checkbox--label::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: var(--greyBlue);
+  border-radius: 10px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input__checkbox--label::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 10px;
+  left: 16px;
+  top: 50%;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%) scale(0.01);
+}
+.input__checkbox--field:checked + label::after {
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 640px) {
+  .input__text {
+    height: 48px;
+    font-size: 14px;
+  }
+  .input-row__name {
+    font-size: 16px;
+  }
+  .dropdownInput__btn {
+    height: 48px;
+    padding: 0px 19px;
+  }
+  .dropdownInput__btn--arrow {
+    width: 6px;
+  }
+  .dropdownInput__btn--preview {
+    font-size: 14px;
+  }
+  .dropdownInput__panel {
+    padding: 0px 19px;
+  }
+  .dropdownInput__panel--item {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  .input__text--field {
+    padding: 0px 19px;
+    font-size: 14px;
+  }
+  .imageInput__label {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+  .new-photo {
+    border-radius: 12px;
+  }
+  .input__checkbox--label {
+    font-size: 14px;
+    padding-left: 37px;
+  }
+  .input__checkbox--label::before {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+  }
+  .input__checkbox--label::after {
+    left: 13px;
+  }
+  .fillForm__submit {
+    width: 100%;
+  }
+  .submit-content {
+    margin-top: 0px !important;
+  }
+  .imageInput .new-photo {
+    width: 48px;
+    height: 48px;
+  }
+}
+.many-choice > * {
+  margin-bottom: 30px;
+}
+
+.fillForm-form {
+  margin-top: 40px;
+}
+.fillForm__submit {
+  margin-right: auto;
+  padding: 13px 110px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.fillForm-row__content.subtext {
+  margin-top: -10px !important;
+}
+.fillForm-row__content.subtext * {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--grey);
+}
+
+@media (max-width: 1280px) {
+  .input-row > *:nth-child(2) {
+    width: 500px;
+    min-width: 500px;
+  }
+}
+@media (max-width: 980px) {
+  .fillForm-row {
+    margin-bottom: 16px;
+  }
+  .many-choice > * {
+    margin-bottom: 16px;
+  }
+  .input-row > *:nth-child(2) {
+    width: 360px;
+    min-width: 360px;
+  }
+}
+@media (max-width: 768px) {
+  .fillForm-row {
+    flex-direction: column;
+    margin-bottom: 27px;
+  }
+  .input-row > *:nth-child(2) {
+    width: 100%;
+    min-width: 100%;
+    margin-left: 0px;
+    margin-top: 16px;
+  }
+  .input-row__name {
+    margin-top: 0px;
+  }
+  .input__checkbox {
+    margin: 0px !important;
+  }
+  .input__checkbox__name {
+    margin-top: 0px !important;
+  }
+  .fillForm-form {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .fillForm-row__content.subtext {
+    margin-top: -20px !important;
+    line-height: 1.2;
+  }
+  .fillForm-row__content.subtext * {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=inputs.css.map */

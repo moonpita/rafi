@@ -15,28 +15,28 @@ html
   block Variables
 
   .container 
-    h1.page-title.signup__title Join rafi 
-    form.auth-form.signup-form
-      .auth-row.input-row 
-        .auth-row__name.input-row__name Email
+    h1.page-title.login__title Join rafi 
+    form.fillForm-form.login-form
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name Email
         +textInput('Email', true, 'Email ')
-      .auth-row.input-row 
-        .auth-row__name.input-row__name Password
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name Password
         +textInput('password', true, '*********')
      
-      .auth-row.input-row
-        .auth-row__name.input-row__name
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
           div 
         +checkboxInput('remember', false, 'remember', 'Remember me')
-      .auth-row.input-row
-        .auth-row__name.input-row__name
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
           div 
-        .auth-row__content.submit-content
-          button.btn.auth__submit Log in
-      .auth-row.input-row
-        .auth-row__name.input-row__name
+        .fillForm-row__content.submit-content
+          button.btn.fillForm__submit Log in
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
           div 
-        .auth-row__content.info-content
+        .fillForm-row__content.info-content
           a.auth-forgot-link(href="./forgot.html") Forgot your password? 
           a.auth-dont-have(href="./forgot.html") Don't have an account? Sign up now!
           p.auth-policy While registering, logging in, or continuing, I agree to the <a href="">Rafi Terms</a> of Use and accept the <a href="./">Rafi Privacy Policy</a>. I consent to Rafi using my email address for marketing purposes. I can opt out at any time through <a href="./">my settings</a>
