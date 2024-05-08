@@ -1,0 +1,4 @@
+mixin checkboxInput(name, required, id, text) 
+  .input.input__checkbox 
+    input.input__checkbox--field(type="checkbox" required=`${required || false}` name="name" id=id)
+    label.input__checkbox--label(for=id) #{text}

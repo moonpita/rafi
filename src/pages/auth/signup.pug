@@ -9,6 +9,8 @@ html
   include ../../shared/ui/inputs/dropdownInput.pug
   include ../../shared/ui/inputs/dropdownWithSearch.pug
   include ../../shared/ui/inputs/imageInput.pug
+  include ../../shared/ui/inputs/textAreaInput.pug
+  include ../../shared/ui/inputs/checkboxInput.pug
 
   block Variables
 
@@ -35,6 +37,28 @@ html
         .auth-row__name.input-row__name
           div Website (optional)
         +textInput('Website', false, 'https://website.org')
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div Additional information (optional)
+        +textArea('textArea', 'textttt', false)
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div 
+        +checkboxInput('personal', true, 'personal', 'I consent to the processing of personal data')
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div 
+        +checkboxInput('personal', true, 'personal2', 'I am familiar with the privacy policy')
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div 
+        +checkboxInput('personal', false, 'personal3', 'I want to receive Rafi newsletters')
+      .auth-row.input-row
+        .auth-row__name.input-row__name
+          div 
+        .auth-row__content 
+          button.btn.auth__submit Submit
+
 
 
   include ../../widgets/footer/footer.pug

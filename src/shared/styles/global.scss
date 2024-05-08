@@ -40,6 +40,7 @@ body {
 }
 
 .btn {
+  cursor: pointer;
   display: block;
   padding: 10px 36px;
   background: var(--red);
@@ -524,25 +525,33 @@ section,footer {
         max-width: 300px;
       }
     }
+    & > *:nth-child(2) {
+      width: 763px;
+      min-width: 763px;
+      margin-left: 40px;
+    }
   }
 
-  width: 763px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background: var(--greyBlue);
-  border-radius: 15px;
 
   &__text {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: var(--greyBlue);
+    border-radius: 15px;
     &--field {
       padding: 0px 39px;
       font-size: 20px;
       line-height: 1.2;
+      width: 100%;
+      height: 100%;
     }
   }
 }
 
 .dropdownInput {
+  height: 60px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -617,7 +626,6 @@ section,footer {
 
 .imageInput {
   display: flex;
-  width: 763px;
   & .new-photo {
     width: 60px;
     height: 60px;
@@ -650,3 +658,58 @@ section,footer {
   }
 }
 
+.input__textArea {
+  height: 181px;
+  background: var(--greyBlue);
+  border-radius: 15px;
+  &--field {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 10px 39px;
+  }
+}
+
+.input__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &--field {
+    display: none;
+  }
+  &--label {
+    position: relative;
+    padding-left: 48px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 32px;
+      background: var(--greyBlue);
+      border-radius: 10px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: var(--red);
+      border-radius: 10px;
+      left: 16px;
+      top: 50%;
+      transition: all .3s ease;
+      transform: translate(-50%, -50%) scale(0.01);
+    }
+  }
+  &--field:checked + label::after {
+    transform: translate(-50%, -50%);
+  }
+}

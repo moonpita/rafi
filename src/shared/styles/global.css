@@ -108,6 +108,7 @@ body {
 }
 
 .btn {
+  cursor: pointer;
   display: block;
   padding: 10px 36px;
   background: var(--red);
@@ -503,14 +504,6 @@ section, footer {
     margin: 0px;
   }
 }
-.input {
-  width: 763px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background: var(--greyBlue);
-  border-radius: 15px;
-}
 .input-row {
   display: flex;
   align-items: flex-start;
@@ -530,13 +523,29 @@ section, footer {
   font-weight: 500;
   max-width: 300px;
 }
+.input-row > *:nth-child(2) {
+  width: 763px;
+  min-width: 763px;
+  margin-left: 40px;
+}
+.input__text {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: var(--greyBlue);
+  border-radius: 15px;
+}
 .input__text--field {
   padding: 0px 39px;
   font-size: 20px;
   line-height: 1.2;
+  width: 100%;
+  height: 100%;
 }
 
 .dropdownInput {
+  height: 60px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -608,7 +617,6 @@ section, footer {
 
 .imageInput {
   display: flex;
-  width: 763px;
 }
 .imageInput .new-photo {
   width: 60px;
@@ -640,4 +648,59 @@ section, footer {
 .imageInput__label img {
   width: 22px;
   height: 22px;
+}
+
+.input__textArea {
+  height: 181px;
+  background: var(--greyBlue);
+  border-radius: 15px;
+}
+.input__textArea--field {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px 39px;
+}
+
+.input__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.input__checkbox--field {
+  display: none;
+}
+.input__checkbox--label {
+  position: relative;
+  padding-left: 48px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.input__checkbox--label::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: var(--greyBlue);
+  border-radius: 10px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input__checkbox--label::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 10px;
+  left: 16px;
+  top: 50%;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%) scale(0.01);
+}
+.input__checkbox--field:checked + label::after {
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=global.css.map */

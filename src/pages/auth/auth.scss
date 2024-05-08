@@ -1,3 +1,14 @@
 .many-choice > * {
   margin-bottom: 30px;
 }
+
+
+.auth {
+  &__submit {
+    margin-right: auto;
+    padding: 13px 110px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
