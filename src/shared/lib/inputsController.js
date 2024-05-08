@@ -51,9 +51,9 @@
     const inp = inputs[i];
     console.log(inp);
     inp.addEventListener('change', () => {
-      
+      const parent = inp.closest('.imageInput');
       // remove old photos
-      document.querySelectorAll('.new-photo').forEach(photo => photo.remove());
+      parent.querySelectorAll('.new-photo').forEach(photo => photo.remove());
       for (let j = 0; j < inp.files.length; j++) {
         const reader = new FileReader();
         

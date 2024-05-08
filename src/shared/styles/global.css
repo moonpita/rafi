@@ -71,6 +71,72 @@ button, a, * {
   --greyBlue: #F2F3F7;
 }
 
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 300;
+  src: url("../fonts/OverusedGrotesk-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 400;
+  src: url("../fonts/OverusedGrotesk-Book.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 500;
+  src: url("../fonts/OverusedGrotesk-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 600;
+  src: url("../fonts/OverusedGrotesk-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Grotesk";
+  font-weight: 700;
+  src: url("../fonts/OverusedGrotesk-Bold.woff2") format("woff2");
+}
+body {
+  font-family: "Grotesk", sans-serif;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  padding: 10px 36px;
+  background: var(--red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.page-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.sec-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+section, footer {
+  margin-top: 100px;
+}
+
 .input-row {
   display: flex;
   align-items: flex-start;
@@ -81,14 +147,14 @@ button, a, * {
   font-size: 18px;
   line-height: 1.4;
   font-weight: 500;
-  max-width: 300px;
+  max-width: 400px;
   margin-top: 18px;
 }
 .input-row__name div {
   font-size: 18px;
   line-height: 1.4;
   font-weight: 500;
-  max-width: 300px;
+  width: 100%;
 }
 .input-row > *:nth-child(2) {
   width: 763px;
@@ -275,6 +341,14 @@ button, a, * {
   transform: translate(-50%, -50%);
 }
 
+.input-row__name span {
+  color: var(--grey);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  display: block;
+}
+
 @media (max-width: 640px) {
   .input__text {
     height: 48px;
@@ -333,6 +407,9 @@ button, a, * {
   .imageInput .new-photo {
     width: 48px;
     height: 48px;
+  }
+  .input__textArea {
+    height: 120px;
   }
 }
 .many-choice > * {
@@ -411,72 +488,6 @@ button, a, * {
     font-size: 14px;
   }
 }
-@font-face {
-  font-family: "Grotesk";
-  font-weight: 300;
-  src: url("../fonts/OverusedGrotesk-Light.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Grotesk";
-  font-weight: 400;
-  src: url("../fonts/OverusedGrotesk-Book.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Grotesk";
-  font-weight: 500;
-  src: url("../fonts/OverusedGrotesk-Medium.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Grotesk";
-  font-weight: 600;
-  src: url("../fonts/OverusedGrotesk-SemiBold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Grotesk";
-  font-weight: 700;
-  src: url("../fonts/OverusedGrotesk-Bold.woff2") format("woff2");
-}
-body {
-  font-family: "Grotesk", sans-serif;
-  font-weight: 500;
-  color: var(--black);
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.btn {
-  cursor: pointer;
-  display: block;
-  padding: 10px 36px;
-  background: var(--red);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 8px;
-}
-
-.page-title {
-  font-size: 48px;
-  font-weight: 500;
-  color: var(--black);
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-
-.sec-title {
-  font-size: 48px;
-  font-weight: 500;
-  color: var(--black);
-  text-transform: uppercase;
-}
-
-section, footer {
-  margin-top: 100px;
-}
-
 .together {
   width: 100%;
   border-radius: 40px;

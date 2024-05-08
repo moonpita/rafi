@@ -1,6 +1,6 @@
 @import 'reset.scss';
 @import 'vars.scss';
-@import 'inputs.scss';
+
 
 @font-face {
   font-family: 'Grotesk';
@@ -68,6 +68,11 @@ body {
 section,footer {
   margin-top: 100px;
 }
+
+// Imports
+
+@import 'inputs.scss';
+
 
 // together section
 

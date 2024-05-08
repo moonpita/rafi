@@ -15,38 +15,32 @@ html
   block Variables
 
   .container 
-    h1.page-title.addProduct__title Add your product
-    form.fillForm-form.addProduct-form
+    h1.page-title.addProject__title Add your product
+    form.fillForm-form.addProject-form
       .fillForm-row.input-row
         .fillForm-row__name.input-row__name.with-subtext
-          div Photos 
-          span It is possible to add up to 5 photos
-        +imageInput('photos', true, true)
+          div First photo
+          span It is possible to add up to 1 photos
+        +imageInput('photos', true, false)
+
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name.with-subtext
+          div Additional photos 
+          span It is possible to add up to 20 photos
+        +imageInput('photos2', false, true)
       
       .fillForm-row.input-row 
-        .fillForm-row__name.input-row__name Product name
+        .fillForm-row__name.input-row__name Project name
         +textInput('productName', true, 'Product name')
 
       .fillForm-row.input-row
         .fillForm-row__name.input-row__name
-          div Product description
+          div Project description
         +textArea('textArea', 'textttt', true)
 
       .fillForm-row.input-row
         .fillForm-row__name.input-row__name Category
         +dropdownInput('category', true, 'Select here')
-      
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name 
-          div Colours 
-          span.open-modal Write to us if you haven't found the right color.
-        +dropdownInput('colours', true, 'Colours')
-
-      .fillForm-row.input-row
-        .fillForm-row__name.input-row__name 
-          div Specifications 
-          span.open-modal Select the required fields and write the appropriate characteristics
-        +textInput('Specs', true, 'Specs')
     
       .fillForm-row.input-row
         .fillForm-row__name.input-row__name

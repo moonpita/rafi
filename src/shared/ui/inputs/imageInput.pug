@@ -1,5 +1,5 @@
-mixin imageInput(name) 
+mixin imageInput(name, required, multiple) 
   .imageInput 
-    input.imageInput__field.input--field(type="file" name=name id=name multiple)
+    input.imageInput__field.input--field(type="file" name=name id=name required=`${required || false}` multiple=multiple)
     label.imageInput__label(for=name) 
       img.imageInput__label--cross(src="../../shared/img/redCross.svg", alt="")
