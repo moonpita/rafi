@@ -617,6 +617,7 @@ section, footer {
 
 .imageInput {
   display: flex;
+  flex-wrap: wrap;
 }
 .imageInput .new-photo {
   width: 60px;
@@ -624,6 +625,7 @@ section, footer {
   margin-right: 20px;
   border-radius: 15px;
   overflow: hidden;
+  margin-bottom: 5px;
 }
 .imageInput .new-photo img {
   width: 100%;
@@ -637,6 +639,7 @@ section, footer {
 .imageInput__label {
   width: 60px;
   height: 60px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -703,4 +706,61 @@ section, footer {
 }
 .input__checkbox--field:checked + label::after {
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 640px) {
+  .input__text {
+    height: 48px;
+    font-size: 14px;
+  }
+  .input-row__name {
+    font-size: 16px;
+  }
+  .dropdownInput__btn {
+    height: 48px;
+    padding: 0px 19px;
+  }
+  .dropdownInput__btn--arrow {
+    width: 6px;
+  }
+  .dropdownInput__btn--preview {
+    font-size: 14px;
+  }
+  .dropdownInput__panel {
+    padding: 0px 19px;
+  }
+  .dropdownInput__panel--item {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  .input__text--field {
+    padding: 0px 19px;
+    font-size: 14px;
+  }
+  .imageInput__label {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+  .new-photo {
+    border-radius: 12px;
+  }
+  .input__checkbox--label {
+    font-size: 14px;
+    padding-left: 37px;
+  }
+  .input__checkbox--label::before {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+  }
+  .input__checkbox--label::after {
+    left: 13px;
+  }
+  .auth__submit {
+    width: 100%;
+  }
+  .submit-content {
+    margin-top: 0px !important;
+  }
 }/*# sourceMappingURL=global.css.map */
