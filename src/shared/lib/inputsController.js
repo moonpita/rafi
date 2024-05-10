@@ -49,7 +49,6 @@
 
   for (let i = 0; i < inputs.length; i++) {
     const inp = inputs[i];
-    console.log(inp);
     inp.addEventListener('change', () => {
       const parent = inp.closest('.imageInput');
       // remove old photos
@@ -57,7 +56,6 @@
       for (let j = 0; j < inp.files.length; j++) {
         const reader = new FileReader();
         
-        console.log('file');
         reader.onloadend = function() {
 
 

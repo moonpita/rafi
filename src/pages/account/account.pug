@@ -1,0 +1,62 @@
+html
+
+  include ./accountVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./account.css")
+
+  block Variables
+
+  .container 
+    .account
+      .account-left 
+        .account-top 
+          h1.page-title.account__title business account 
+          .account-hasBadges.desk
+            .account-hasBadges__item 
+              img(src="./img/badge1.svg", alt="", srcset="")
+            .account-hasBadges__item 
+              img(src="./img/badge2.svg", alt="", srcset="")
+            .account-hasBadges__item 
+              img(src="./img/badge3.svg", alt="", srcset="")
+            .account-hasBadges__item 
+              img(src="./img/badge4.svg", alt="", srcset="")
+            .account-hasBadges__item 
+              img(src="./img/badge5.svg", alt="", srcset="")
+            .account-hasBadges__item 
+              img(src="./img/badge1.svg", alt="", srcset="")
+        .account-info 
+          img.account-info__img(src="./img/logo.png", alt="")
+          .account-info__text 
+            h1.account-info__text--title Company Name 
+            span.account-info__text--role director
+      .account-right 
+        .account-hasBadges.mob
+          .account-hasBadges__item 
+            img(src="./img/badge1.svg", alt="", srcset="")
+          .account-hasBadges__item 
+            img(src="./img/badge2.svg", alt="", srcset="")
+          .account-hasBadges__item 
+            img(src="./img/badge3.svg", alt="", srcset="")
+          .account-hasBadges__item 
+            img(src="./img/badge4.svg", alt="", srcset="")
+          .account-hasBadges__item 
+            img(src="./img/badge5.svg", alt="", srcset="")
+          .account-hasBadges__item 
+            img(src="./img/badge1.svg", alt="", srcset="")
+        a.btn.account-right__btn.account-right__btn--settings(href="./") <span>Settings</span> <img src="./img/gear.svg" class="settings-btn-mob-img">
+        a.btn.account-right__btn.account-right__btn--product(href="./") Add product
+        a.btn.account-right__btn.account-right__btn--project(href="./") Add project
+        a.btn.account-right__btn.account-right__btn--status(href="./") Status product
+
+    include ./badge/badge.pug
+    .account-badges.badges 
+      each badge in badges
+        +Badge(badge.name, badge.image, badge.description, badge.requirements)
+
+  include ../../widgets/footer/footer.pug
+
+  //- script(src="./account.js" defer) 
+
+
+
+

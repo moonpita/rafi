@@ -1,0 +1,12 @@
+mixin Badge(name, image, description, requirements)
+  .badge 
+    .badge-col 
+      img.badge__img(src=image, alt="name")
+      h4.badge__name #{name}
+    .badge-col 
+      span.badge__subtitle Description: 
+      p.badge__text #{description}
+      button.btn.badge__get Get a badge 
+    .badge-col 
+      span.badge__subtitle Requirements: 
+      p.badge__text #{requirements}
