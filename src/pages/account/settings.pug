@@ -1,0 +1,73 @@
+html
+
+  include ./accountVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet" href="./account.css")
+
+
+  include ../../shared/ui/inputs/textInput.pug
+  include ../../shared/ui/inputs/dropdownInput.pug
+  include ../../shared/ui/inputs/dropdownWithSearch.pug
+  include ../../shared/ui/inputs/imageInput.pug
+  include ../../shared/ui/inputs/textAreaInput.pug
+  include ../../shared/ui/inputs/bigPhotoInput.pug
+
+  block Variables
+
+  .container 
+    h1.page-title.settings__title Join rafi 
+    form.fillForm-form.settings-form
+      .fillForm__title Personal information
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name Photo
+        +bigPhotoInput('photo', true, 'photo')
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name Company name 
+        +textInput('companyName', true, 'Company name')
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name Field
+        +dropdownInput('WhoAreYou', true, 'Select here')
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
+          div Upload licenses
+        +imageInput('licenses', true, true)
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
+          div Website (optional)
+        +textInput('Website', false, 'https://website.org')
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
+          div Additional information (optional)
+        +textArea('textArea', 'textttt', false)
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
+          div 
+        .fillForm-row__content.submit-content
+          button.btn.fillForm__submit Save changes
+
+    form.fillForm-form.settings-form
+      .fillForm__title Account
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name E-mail
+        +textInput('email', true, 'mail@mail.ru')
+      .fillForm-row.input-row 
+        .fillForm-row__name.input-row__name Password
+        .fillForm-row__content.with-subtext
+          +textInput('Password', true, '*** *** ***')
+          span At least 6 characters
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
+          div 
+        .fillForm-row__content.submit-content
+          button.btn.fillForm__submit Save changes
+
+
+
+  include ../../widgets/footer/footer.pug
+
+  script(src="../../shared/lib/inputsController.js" defer) 
+  script(src="./account.js" defer) 
+
+
+
+

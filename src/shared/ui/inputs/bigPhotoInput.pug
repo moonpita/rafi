@@ -1,0 +1,6 @@
+mixin bigPhotoInput(name, required, multiple) 
+  .bigPhotoInput 
+    input.bigPhotoInput__field.input--field(type="file" name=name id=name required=`${required || false}` multiple=multiple)
+    label.bigPhotoInput__label(for=name) 
+      img.bigPhotoInput__label--photo(src="../../shared/img/photoPlaceholder.svg", alt="")
+      .bigPhotoInput__label--info JPEG, PNG <br>Minimum size 100x100 pixels

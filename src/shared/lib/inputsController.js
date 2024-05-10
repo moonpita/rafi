@@ -57,8 +57,6 @@
         const reader = new FileReader();
         
         reader.onloadend = function() {
-
-
           const newPhotoBlock = document.createElement('div');
           newPhotoBlock.innerHTML = `
             <img src="${reader.result}">
@@ -71,6 +69,31 @@
 
     })
 
+  }
+
+})();
+
+// Big photo
+
+(function() {
+  const inputs = document.getElementsByClassName('bigPhotoInput__field');
+
+  for (let i = 0; i < inputs.length; i++) {
+    const inp = inputs[i];
+    inp.addEventListener('change', () => {
+      const parent = inp.closest('.bigPhotoInput');
+
+      for (let j = 0; j < inp.files.length; j++) {
+        const reader = new FileReader();
+        
+        reader.onloadend = function() {
+          const photo = parent.querySelector('.bigPhotoInput__label--photo');
+
+          photo.setAttribute('src', reader.result);
+        };
+        reader.readAsDataURL(inp.files[j]);
+      }
+    })
   }
 
 })();
