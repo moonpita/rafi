@@ -1,0 +1,43 @@
+html
+  link(rel="stylesheet", href="./catalog.css")
+
+
+  include ./catalogVars.pug
+  include ../../widgets/header/header.pug
+  
+  
+  block Variables
+
+  .container 
+    h1.page-title.productsSubcategories__title Products
+    .productsSubcategories 
+      a.productsSubcategories__item(href="./")
+        img.productsSubcategories__item--img(src="./img/subcat1.png", alt="")
+        .productsSubcategories__item--title Wood-based panel materieal
+      a.productsSubcategories__item(href="./")
+        img.productsSubcategories__item--img(src="./img/subcat2.png", alt="")
+        .productsSubcategories__item--title Lumber
+      a.productsSubcategories__item(href="./")
+        img.productsSubcategories__item--img(src="./img/subcat3.png", alt="")
+        .productsSubcategories__item--title Wood finishing
+      a.productsSubcategories__item(href="./")
+        img.productsSubcategories__item--img(src="./img/subcat1.png", alt="")
+        .productsSubcategories__item--title Wood-doodood
+      a.productsSubcategories__item(href="./")
+        img.productsSubcategories__item--img(src="./img/subcat2.png", alt="")
+        .productsSubcategories__item--title Wood-based panel materieal
+      a.productsSubcategories__item(href="./")
+        img.productsSubcategories__item--img(src="./img/subcat3.png", alt="")
+        .productsSubcategories__item--title Wooden stairs
+      
+        
+
+  
+
+
+  include ../../widgets/footer/footer.pug
+  script(src="catalog.js" defer) 
+
+  
+  
+

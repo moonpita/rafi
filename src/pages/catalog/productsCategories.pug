@@ -1,0 +1,31 @@
+html
+  link(rel="stylesheet", href="./catalog.css")
+
+
+  include ./catalogVars.pug
+  include ../../widgets/header/header.pug
+  
+  
+  block Variables
+
+  .container 
+    h1.page-title.productsCategories__title Products
+    .productsCategories 
+      each category in categories 
+        .productsCategories-item
+          img.productsCategories-item__img(src=`${category.img}`, alt="")
+          a.productsCategories-item__title(href=`${category.link}`) #{category.title}
+          each subcategory in category.subcategories 
+            a.productsCategories-item__subcategory(href=`${subcategory.link}`) #{subcategory.name} 
+          div.productsCategories-item__subcategory.more-btn More 
+        
+
+  
+
+
+  include ../../widgets/footer/footer.pug
+  script(src="catalog.js" defer) 
+
+  
+  
+
