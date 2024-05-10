@@ -1,6 +1,6 @@
 (function() {
 
-  const allAccBtns = document.querySelectorAll('.help__btn');
+  const allAccBtns = document.querySelectorAll('.acc-btn');
   allAccBtns.forEach(btn => {
     btn.onclick = () => {
       btn.classList.toggle('active');
