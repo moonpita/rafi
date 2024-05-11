@@ -22,3 +22,16 @@ modalBg.onclick = () => {
   modalBg.classList.remove('active');
   document.querySelectorAll('.overlayContent').forEach(ov => ov.classList.remove('active'))
 };
+
+
+// burger
+
+const burgerBtn = document.querySelector('.burger-btn');
+const burgerMenu = document.querySelector('.burger-menu');
+const burgerClose = document.querySelector('.burger-menu__close');
+burgerBtn.onclick = () => {
+  burgerMenu.classList.add('active');
+}
+burgerClose.onclick = () => {
+  burgerMenu.classList.remove('active');
+}

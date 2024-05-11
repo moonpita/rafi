@@ -6,6 +6,16 @@ head
 body 
   .modal-bg 
 
+  .burger-menu 
+    .burger-menu__close 
+      img.burger-menu__close--img(src="../../shared/img/closeIconGrey.svg", alt="")
+    a.burger-menu__item(href="./") Products 
+    a.burger-menu__item(href="./") Companies 
+    a.burger-menu__item(href="./") Projects
+    a.burger-menu__item(href="./") About us 
+    a.burger-menu__item(href="./") Blog 
+
+
   header.header-sec
     .container 
       .header-top
@@ -14,7 +24,8 @@ body
 
       .header 
         a(href="/").header__logo
-          img.header__logo-img(src="../../widgets/header/logo.svg")
+          img.header__logo-img.desk(src="../../widgets/header/logo.svg")
+          img.header__logo-img.mob(src="../../widgets/header/logoMob.svg")
         .header__preopen Pre-opening stage - registration and accommodation for free
         nav.header-nav 
           a.header-nav__item(href="/") Products 
@@ -24,3 +35,6 @@ body
           a.header-nav__item(href="/") Favorites
           a.header-nav__item(href="/") Blog
         button.btn.header__join Join Rafi
+
+        .burger-btn 
+          img.burger-btn__img(src="../../shared/img/burgerIcon.svg", alt="")
