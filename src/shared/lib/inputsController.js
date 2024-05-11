@@ -120,3 +120,113 @@
     })
   })
 })();
+
+
+// Phone inputs
+
+(function() {
+
+  if (!document.querySelector('.phone-input')) return;
+
+  const phoneInputs = document.querySelectorAll('.phone-input');
+
+  phoneInputs.forEach(inp => {
+    IMask(
+      inp,
+      {
+        mask: '+{62-361}(000)-0000'
+      }
+    )
+  })
+})();
+
+
+
+
+
+// Form controller
+
+const validateFormOnPage = (className) => {
+  const form = document.querySelector(`.${className}`);
+
+  let hasErrors = false;
+  // text validations-----------------------------------------------
+  const textInputsWraps = form.querySelectorAll('.valid-text-input');
+  textInputsWraps.forEach(wrap => {
+    const inp = wrap.querySelector('input');
+    if (inp.getAttribute('required') == 'false') return;
+    const minLength = inp.getAttribute('data-min-length') || 3;
+    if (inp.value.length < minLength) {
+      wrap.classList.add('error');
+      hasErrors = true;
+    }
+  });
+
+  // phone validations-----------------------------------------------
+  const phoneInputsWraps = form.querySelectorAll('.valid-phone-input');
+  phoneInputsWraps.forEach(wrap => {
+    const inp = wrap.querySelector('input');
+    if (inp.getAttribute('required') == 'false') return;
+    if (inp.value.length < 17) {
+      wrap.classList.add('error');
+      hasErrors = true;
+    }
+  });
+  // dropdown validations-----------------------------------------------
+  const dropdownInputsWraps = form.querySelectorAll('.valid-dropdown-input');
+  dropdownInputsWraps.forEach(wrap => {
+    const inp = wrap.querySelector('input');
+    if (inp.getAttribute('required') == 'false') return;
+    if (inp.value.length < 1) {
+      wrap.classList.add('error');
+      hasErrors = true;
+    };
+  });
+  // images validations-----------------------------------------------
+  const imageInputsWraps = form.querySelectorAll('.valid-image-input');
+  imageInputsWraps.forEach(wrap => {
+    const inp = wrap.querySelector('input');
+    const limitOfFiles = +inp.getAttribute('data-max-photos');
+    
+    // optional, but count of photos bigger than limit
+    if (inp.files.length > limitOfFiles) {
+      wrap.classList.add('error');
+      wrap.classList.add('length-error');
+      hasErrors = true;
+    }
+    // required, but not filed
+    if (
+      (inp.getAttribute('required') == 'true') 
+      &&
+      (inp.files.length < 1)
+      ) {
+        wrap.classList.add('error');
+        wrap.classList.add('required-error');
+        hasErrors = true;
+      }
+  });
+  // textarea validations-----------------------------------------------
+  const textAreaWraps = form.querySelectorAll('.valid-textarea-input');
+  textAreaWraps.forEach(wrap => {
+    const area = wrap.querySelector('textarea');
+    if (area.getAttribute('required') == 'false') return;
+
+    const minLength = area.getAttribute('data-min-length') || 3;
+    if (area.value.length < minLength) {
+      wrap.classList.add('error');
+      hasErrors = true;
+    }
+  });
+  // email validations
+  const emailInputsWraps = form.querySelectorAll('.valid-email-input');
+  emailInputsWraps.forEach(wrap => {
+    const inp = wrap.querySelector('input');
+    if (inp.getAttribute('required') == 'false') return;
+    const regex =/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (!inp.value.toLowerCase().match(regex)) {
+      wrap.classList.add('error');
+      hasErrors = true;
+    }
+  });
+
+}

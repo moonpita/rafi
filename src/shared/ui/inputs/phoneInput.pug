@@ -1,0 +1,3 @@
+mixin phoneInput(name, required, placeholder)
+  .input.input__text.valid-phone-input
+    input.input__text--field.phone-input.input--field(type="text", data-min-length="5" name=name placeholder=`${placeholder || ''}` required=`${required || false}`)

@@ -1,5 +1,5 @@
 mixin dropdownInput(name, required, placeholder)
-  .dropdownInput.input
+  .dropdownInput.input.valid-dropdown-input
     input.dropdownInput__hidden.input--field(type="text" name=name required=`${required || false}`)
     .dropdownInput__btn 
       .dropdownInput__btn--preview #{placeholder || ''} 

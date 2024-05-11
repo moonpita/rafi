@@ -6,6 +6,7 @@ html
 
 
   include ../../shared/ui/inputs/textInput.pug
+  include ../../shared/ui/inputs/phoneInput.pug
   include ../../shared/ui/inputs/dropdownInput.pug
   include ../../shared/ui/inputs/dropdownWithSearch.pug
   include ../../shared/ui/inputs/imageInput.pug
@@ -39,6 +40,10 @@ html
         +textInput('Website', false, 'https://website.org')
       .fillForm-row.input-row
         .fillForm-row__name.input-row__name
+          div Phone
+        +phoneInput('Phone', false, '+62-361-xxx-xxxx')
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
           div Additional information (optional)
         +textArea('textArea', 'textttt', false)
       .fillForm-row.input-row
@@ -63,6 +68,7 @@ html
 
   include ../../widgets/footer/footer.pug
 
+  <script src="https://unpkg.com/imask"></script>
   script(src="../../shared/lib/inputsController.js" defer) 
   script(src="./auth.js" defer) 
 
