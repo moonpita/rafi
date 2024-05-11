@@ -408,10 +408,39 @@
   .catalog-top-filter:not(:last-child) {
     margin-right: 20px;
   }
+  .catalog-top > .catalog-top-filter {
+    background: var(--greyBlue);
+  }
   .catalog-top-filter {
     padding: 4px 13px;
     border-radius: 10px;
     font-size: 14px;
-    background: var(--greyBlue);
+  }
+  .catalog-top-filter__open--menu {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+  .catalog-top-filter__open--menu.active {
+    display: flex;
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
+  .catalog-top-filter__text img {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .catalog-top {
+    transform: translateX(calc((100% - (100% - 32px)) / 2 * -1));
+  }
+  .catalog-top > *:first-child {
+    margin-left: calc((100% - (100% - 32px)) / 2);
+  }
+  .catalog-top > *:last-child {
+    margin-right: calc((100% - (100% - 32px)) / 2);
   }
 }/*# sourceMappingURL=catalog.css.map */

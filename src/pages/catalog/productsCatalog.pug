@@ -58,9 +58,9 @@ html
             input.catalog-top-filter__toggle--input(type="checkbox" name="license" id="license")
             label.catalog-top-filter__text.catalog-top-filter__toggle--text(for="license") Indonesian License
 
-          .catalog-top-filter.catalog-top-filter__open
+          .catalog-top-filter.catalog-top-filter__open(data-name="leng")
             .catalog-top-filter__text.catalog-top-filter__open--text Project size <img src="../../shared/img/bottomArrowBlack.svg">
-            .catalog-top-filter.catalog-top-filter__open--menu 
+            .catalog-top-filter.catalog-top-filter__open--menu.overlayContent(data-name="leng") 
               +checkboxInput('length051', false, 'length051', '0.5m 1')
               +checkboxInput('length11', false, 'length11', '1m 1')
               +checkboxInput('length21', false, 'length21', '2m 1')
@@ -70,9 +70,9 @@ html
             input.catalog-top-filter__toggle--input(type="checkbox" name="bali" id="bali")
             label.catalog-top-filter__text.catalog-top-filter__toggle--text(for="bali") Projects in Bali
         
-          .catalog-top-filter.catalog-top-filter__open
+          .catalog-top-filter.catalog-top-filter__open(data-name="any") 
             .catalog-top-filter__text.catalog-top-filter__open--text Project type <img src="../../shared/img/bottomArrowBlack.svg">
-            .catalog-top-filter.catalog-top-filter__open--menu 
+            .catalog-top-filter.catalog-top-filter__open--menu.overlayContent(data-name="any") 
               +checkboxInput('length051', false, 'length051', '0.5m 1')
               +checkboxInput('length11', false, 'length11', '1m 1')
               +checkboxInput('length21', false, 'length21', '2m 1')

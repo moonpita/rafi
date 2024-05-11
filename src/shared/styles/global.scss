@@ -293,6 +293,25 @@ section,footer {
   }
 }
 
+// modals
+
+.modal-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #000000, $alpha: 0.3);
+  z-index: 21;
+  opacity: 0;
+  transition: opacity .35s ease;
+  transform: translateY(-200%);
+  &.active {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
 // accordion
 

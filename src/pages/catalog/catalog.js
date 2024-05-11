@@ -77,11 +77,44 @@
   const openFilters = document.querySelectorAll('.catalog-top-filter__open--text');
 
   openFilters.forEach(open => {
-
+    const parent = open.closest('.catalog-top-filter__open');
     open.onclick = () => {
-      open.closest('.catalog-top-filter__open').classList.toggle('active');
+      parent.classList.toggle('active');
+
+      if (window.innerWidth < 769) {
+        const name = parent.getAttribute('data-name');
+
+        // remove active others
+        document.querySelectorAll('.catalog-top-filter__open--menu').forEach(menu => {
+          if (menu.getAttribute('data-name') === name) return;
+          menu.classList.remove('active');
+        })
+        document.querySelectorAll('.catalog-top-filter__open').forEach(menu => {
+          if (menu.getAttribute('data-name') === name) return;
+          menu.classList.remove('active');
+        })
+        changeModalBgState();
+        // active current
+        document.querySelector(`.catalog-top-filter__open--menu[data-name="${name}"]`).classList.toggle('active');
+      }
     }
 
   })
 
+})();
+
+
+(function() {
+  if (window.innerWidth < 769) {
+  
+    const wrap = document.querySelector('.catalog-right');
+    const allOpenMenu = document.querySelectorAll('.catalog-top-filter__open--menu');
+    allOpenMenu.forEach(menu => {
+      const newMenuEl = menu.cloneNode(true);
+
+      wrap.appendChild(newMenuEl);
+      menu.remove();
+    });
+
+  }
 })();
