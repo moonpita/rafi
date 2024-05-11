@@ -21,36 +21,58 @@ html
         .catalog-mob-top__filter 
           img(src="../../shared/img/settings.svg", alt="")
       .catalog-left.overlayContent
-        .acc-btn.catalog-left__block--btn 
-          span Categories 
-          img(src="../../shared/img/arrowBottom.svg", alt="")
-        .catalog-left__block--content
-          a.catalog-left__block--link.back(href="./") 
-            img(src="../../shared/img/redArrowBack.svg", alt="")
-            span Back from category 
-          a.catalog-left__block--link(href="./") category X
-          a.catalog-left__block--link(href="./") category Z 
-        
-        .acc-btn.catalog-left__block--btn 
-          span Length
-          img(src="../../shared/img/arrowBottom.svg", alt="")
-        .catalog-left__block--content
-          +checkboxInput('length05', false, 'length05', '0.5m')
-          +checkboxInput('length1', false, 'length1', '1m')
-          +checkboxInput('length2', false, 'length2', '2m')
-        .acc-btn.catalog-left__block--btn 
-          span Price
-          img(src="../../shared/img/arrowBottom.svg", alt="")
-        .catalog-left__block--content
-          .slideInput-wrapper 
-            .slideInput
-            .slideInput-fields
-              div 
-                span from 
-                input.slideInput-fields__input.min(type="text" name="priceMin" data-min-value="10")
-              div 
-                span to
-                input.slideInput-fields__input.max(type="text" name="priceMax" data-max-value="1000")
+        .catalog-left-content 
+          .acc-btn.catalog-left__block--btn 
+              span Categories 
+              img(src="../../shared/img/arrowBottom.svg", alt="")
+          .catalog-left__block--content
+            a.catalog-left__block--link.back(href="./") 
+              img(src="../../shared/img/redArrowBack.svg", alt="")
+              span Back from category 
+            a.catalog-left__block--link(href="./") category X
+            a.catalog-left__block--link(href="./") category Z 
+          
+          .acc-btn.catalog-left__block--btn 
+            span Length
+            img(src="../../shared/img/arrowBottom.svg", alt="")
+          .catalog-left__block--content
+            +checkboxInput('length05', false, 'length05', '0.5m')
+            +checkboxInput('length1', false, 'length1', '1m')
+            +checkboxInput('length2', false, 'length2', '2m')
+          .acc-btn.catalog-left__block--btn 
+            span Length
+            img(src="../../shared/img/arrowBottom.svg", alt="")
+          .catalog-left__block--content
+            +checkboxInput('length05', false, 'length05', '0.5m')
+            +checkboxInput('length1', false, 'length1', '1m')
+            +checkboxInput('length2', false, 'length2', '2m')
+          .acc-btn.catalog-left__block--btn 
+            span Length
+            img(src="../../shared/img/arrowBottom.svg", alt="")
+          .catalog-left__block--content
+            +checkboxInput('length05', false, 'length05', '0.5m')
+            +checkboxInput('length1', false, 'length1', '1m')
+            +checkboxInput('length2', false, 'length2', '2m')
+          .acc-btn.catalog-left__block--btn 
+            span Length
+            img(src="../../shared/img/arrowBottom.svg", alt="")
+          .catalog-left__block--content
+            +checkboxInput('length05', false, 'length05', '0.5m')
+            +checkboxInput('length1', false, 'length1', '1m')
+            +checkboxInput('length2', false, 'length2', '2m')
+          .acc-btn.catalog-left__block--btn 
+            span Price
+            img(src="../../shared/img/arrowBottom.svg", alt="")
+          .catalog-left__block--content
+            .slideInput-wrapper 
+              .slideInput
+              .slideInput-fields
+                div 
+                  span from 
+                  input.slideInput-fields__input.min(type="text" name="priceMin" data-min-value="10")
+                div 
+                  span to
+                  input.slideInput-fields__input.max(type="text" name="priceMax" data-max-value="1000")
 
       .catalog-right 
         .catalog-top 

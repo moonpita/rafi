@@ -98,7 +98,6 @@
         document.querySelector(`.catalog-top-filter__open--menu[data-name="${name}"]`).classList.toggle('active');
       }
     }
-
   })
 
 })();
@@ -118,6 +117,7 @@
 
   }
 })();
+
 
 const filterBtn = document.querySelector('.catalog-mob-top__filter');
 const filter = document.querySelector('.catalog-left');
