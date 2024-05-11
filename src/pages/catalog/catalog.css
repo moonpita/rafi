@@ -201,6 +201,11 @@
   height: 15px;
   border-radius: 2px;
 }
+.catalog .input__checkbox--label::after {
+  width: 8px;
+  height: 9px;
+  left: 8px;
+}
 
 .slideInput {
   height: 2px;

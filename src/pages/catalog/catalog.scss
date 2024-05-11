@@ -225,6 +225,11 @@
       height: 15px;
       border-radius: 2px;
     }
+    &::after {
+      width: 8px;
+      height: 9px;
+      left: 8px;
+    }
   }
 }
 

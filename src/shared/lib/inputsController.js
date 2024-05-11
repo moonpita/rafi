@@ -97,3 +97,26 @@
   }
 
 })();
+
+
+// Dropdown with search 
+
+(function() {
+  const dropdownSearchFields = document.querySelectorAll('.dropdownInput__panel--search');
+  dropdownSearchFields.forEach(field => {
+    const parentEl = field.closest('.dropdownInput__panel');
+    const allitems = parentEl.querySelectorAll('.dropdownInput__panel--item');
+    console.log(field);
+    field.addEventListener('input', (e) => {
+      console.log(e);
+      allitems.forEach(item => {
+        if (item.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())) {
+          item.style.display = null
+        } else {
+          item.style.display = 'none';
+        }
+      })
+
+    })
+  })
+})();
