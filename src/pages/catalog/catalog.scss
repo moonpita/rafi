@@ -239,13 +239,13 @@
   }
   & .noUi-connect {
     background: var(--red);
-    top: -10px !important;
   }
   & .noUi-handle {
     width: 20px;
     height: 20px;
     box-shadow: none;
     border-radius: 50%;
+    top: -10px !important;
     &::before,
     &::after {
       display: none;
@@ -397,6 +397,9 @@
   }
 }
 
+body.disabled {
+  overflow: hidden;
+}
 
 @media (max-width: 1280px) {
   .catalog__item {
@@ -446,6 +449,11 @@
     width: 100vw;
     overflow-x: scroll;
     transform: translateX(calc(((100% - 600px) / 2) * -1));
+    -ms-overflow-style: none;  /* IE и Edge */
+    scrollbar-width: none;  /* Firefox */
+    ::-webkit-scrollbar {
+      display: none;
+    }
     & > *:first-child {
       margin-left: calc(((100% - 600px) / 2));
     }
@@ -487,6 +495,55 @@
   .catalog-top-filter__text img {
     display: none;
   }
+
+
+  .catalog-left {
+    flex-direction: column;
+    width: calc(100vw - 32px);
+    max-height: 60vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 30px;
+    padding: 28px 35px;
+    z-index: 99;
+    padding-right: 22px;
+    &.active {
+      display: flex;
+    }
+  }
+  .catalog-left__block--btn img {
+    display: none;
+  }
+
+  .catalog-left__block--content {
+    height: auto !important;
+    max-height: 100% !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--greyBlue);
+    }
+  }
+
+  .top-filter-indicator {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--red);
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 4px 13px;
+    & img {
+      margin-left: 12px;
+    }
+  }
+
 }
 
 @media (max-width: 640px) {
@@ -498,5 +555,23 @@
     & > *:last-child {
       margin-right: calc(((100% - (100% - 32px)) / 2));
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-left__block--link {
+    font-size: 14px;
+    & span {
+      font-size: 14px;
+    }
+  }
+  .catalog-left__block--link img {
+    margin-right: 8px;
+    width: 5px;
+  }
+
+  .catalog__item{
+    width: 100%;
+    margin-right: 0px !important;
   }
 }

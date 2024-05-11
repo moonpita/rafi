@@ -118,3 +118,71 @@
 
   }
 })();
+
+const filterBtn = document.querySelector('.catalog-mob-top__filter');
+const filter = document.querySelector('.catalog-left');
+
+filterBtn.onclick = () => {
+  filter.classList.add('active');
+  changeModalBgState('enable')
+}
+
+
+
+const uppdateFilterIndicators = () => {
+  if (window.innerWidth < 769) {
+    const allCheckedInputs = document.querySelectorAll('.catalog-left input:checked');
+    const wrapperForIndicator = document.querySelector('.catalog-top');
+  
+    // remove previous indicators
+    document.querySelectorAll('.top-filter-indicator').forEach(i => i.remove());
+
+    // add all indicators
+    allCheckedInputs.forEach(inp => {
+      const checkIndicator = document.createElement('div');
+      const title = inp.closest('.input').querySelector('label').textContent;
+      checkIndicator.innerHTML = `${title} <img src="../../shared/img/whiteRemove.svg">`
+      checkIndicator.classList.add('top-filter-indicator')
+  
+      wrapperForIndicator.insertBefore(checkIndicator, wrapperForIndicator.firstChild);
+
+      const removeEl = () => {
+        checkIndicator.remove();
+        inp.checked = false;
+      }
+
+      checkIndicator.querySelector('img').addEventListener('click', removeEl);
+      
+      return () => {
+        checkIndicator.querySelector('img').removeEventListener('click', removeEl);
+      }
+    })
+  }
+}
+
+
+// On every checkbox updates
+const onUpdateFilter = () => {
+
+  // Fetch
+  const promise = new Promise(resolve => {
+    setTimeout(() => {
+      resolve('lalala');
+    }, 500)
+  });
+
+  // Update html after fetch
+  promise.then((lol) => {
+    console.log(lol);
+    uppdateFilterIndicators();
+  })
+}
+
+
+const allFilterInputs = document.querySelectorAll('input');
+
+allFilterInputs.forEach(inp => {
+  inp.addEventListener('change', () => {
+    onUpdateFilter();
+  })
+})
