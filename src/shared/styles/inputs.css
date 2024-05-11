@@ -224,6 +224,66 @@
   display: block;
 }
 
+.input__text,
+.input__textarea,
+.dropdownInput,
+.imageInput {
+  position: relative;
+}
+.input__text::after,
+.input__textarea::after,
+.dropdownInput::after,
+.imageInput::after {
+  content: "The data is entered incorrectly";
+  position: absolute;
+  bottom: -14px;
+  font-size: 12px;
+  color: var(--red);
+  left: 0;
+  opacity: 0;
+}
+.input__text.error::after,
+.input__textarea.error::after,
+.dropdownInput.error::after,
+.imageInput.error::after {
+  opacity: 1;
+}
+
+.input__text,
+.input__textarea {
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.input__text.error,
+.input__textarea.error {
+  border-color: var(--red);
+}
+
+.dropdownInput .dropdownInput__btn {
+  transition: all 0.3s ease;
+}
+
+.dropdownInput.error .dropdownInput__btn {
+  border-color: var(--red);
+}
+
+.imageInput.required-error::after {
+  content: "File is required";
+}
+
+.imageInput.length-error::after {
+  content: "Too many files!";
+}
+
+.input__checkbox label::before {
+  border: 1px solid transparent;
+}
+
+.input__checkbox.error label::before {
+  border: 1px solid var(--red);
+}
+
 @media (max-width: 640px) {
   .input__text {
     height: 48px;

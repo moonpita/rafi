@@ -7,6 +7,7 @@ html
 
   include ../../shared/ui/inputs/textInput.pug
   include ../../shared/ui/inputs/phoneInput.pug
+  include ../../shared/ui/inputs/emailInput.pug
   include ../../shared/ui/inputs/dropdownInput.pug
   include ../../shared/ui/inputs/dropdownWithSearch.pug
   include ../../shared/ui/inputs/imageInput.pug
@@ -41,11 +42,15 @@ html
       .fillForm-row.input-row
         .fillForm-row__name.input-row__name
           div Phone
-        +phoneInput('Phone', false, '+62-361-xxx-xxxx')
+        +phoneInput('Phone', true, '+62-361-xxx-xxxx')
+      .fillForm-row.input-row
+        .fillForm-row__name.input-row__name
+          div Email
+        +emailInput('Email', true, 'a@aa.aa')
       .fillForm-row.input-row
         .fillForm-row__name.input-row__name
           div Additional information (optional)
-        +textArea('textArea', 'textttt', false)
+        +textArea('textArea', 'textttt', true)
       .fillForm-row.input-row
         .fillForm-row__name.input-row__name
           div 

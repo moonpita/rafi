@@ -144,19 +144,43 @@
 
 
 
-// Form controller
+// Form valid controller
 
-const validateFormOnPage = (className) => {
-  const form = document.querySelector(`.${className}`);
+const vanilaInputs = document.querySelectorAll('input[type="text"], textarea');
+vanilaInputs.forEach(inp => {
+  inp.addEventListener('focus', () => {
+    inp.closest('.input').classList.remove('error');
+  })
+ 
+})
+const fileInputs = document.querySelectorAll('input[type="file"]');
+fileInputs.forEach(inp => {
+  inp.addEventListener('change', () => {
+    inp.closest('.imageInput').classList.remove('error');
+  })
+});
+const dropdownBtns = document.querySelectorAll('.dropdownInput__btn');
+dropdownBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.dropdownInput').classList.remove('error');
+  })
+})
+
+const validateFormOnPage = (form) => {
+  console.log(form);
+  // const form = document.querySelector(`.${className}`);
 
   let hasErrors = false;
   // text validations-----------------------------------------------
   const textInputsWraps = form.querySelectorAll('.valid-text-input');
   textInputsWraps.forEach(wrap => {
     const inp = wrap.querySelector('input');
+    console.log(inp, ' checking input');
     if (inp.getAttribute('required') == 'false') return;
     const minLength = inp.getAttribute('data-min-length') || 3;
+    console.log(inp.value.length, minLength, ' text input, minLength check')
     if (inp.value.length < minLength) {
+      // console.log('error in inp');
       wrap.classList.add('error');
       hasErrors = true;
     }
@@ -166,7 +190,9 @@ const validateFormOnPage = (className) => {
   const phoneInputsWraps = form.querySelectorAll('.valid-phone-input');
   phoneInputsWraps.forEach(wrap => {
     const inp = wrap.querySelector('input');
+    console.log(inp, ' phone input');
     if (inp.getAttribute('required') == 'false') return;
+    console.log(inp.value.length, ' phone input, length');
     if (inp.value.length < 17) {
       wrap.classList.add('error');
       hasErrors = true;
@@ -176,9 +202,12 @@ const validateFormOnPage = (className) => {
   const dropdownInputsWraps = form.querySelectorAll('.valid-dropdown-input');
   dropdownInputsWraps.forEach(wrap => {
     const inp = wrap.querySelector('input');
+    console.log(inp, ' dropdown inp')
     if (inp.getAttribute('required') == 'false') return;
+    console.log(inp.value, ' value in dropdown');
     if (inp.value.length < 1) {
       wrap.classList.add('error');
+      console.log('err in drop')
       hasErrors = true;
     };
   });
@@ -228,5 +257,14 @@ const validateFormOnPage = (className) => {
       hasErrors = true;
     }
   });
-
+  // checkbox validations
+  const checkboxWraps = document.querySelectorAll('.input__checkbox');
+  checkboxWraps.forEach(wrap => {
+    const inp = wrap.querySelector('input');
+    if (inp.getAttribute('required') == 'false') return;
+    if (!inp.checked) {
+      wrap.classList.add('error');
+      hasErrors = true;
+    }
+  });
 }
