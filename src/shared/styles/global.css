@@ -1095,4 +1095,9 @@ section, footer {
     padding-left: 8px;
     border-radius: 8px;
   }
+}
+.listPage a {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 20px;
 }/*# sourceMappingURL=global.css.map */

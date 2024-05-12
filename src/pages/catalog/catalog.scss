@@ -154,6 +154,7 @@
   margin-top: 40px;
   &-left {
     width: 230px;
+    min-width: 230px;
     margin-right: 20px;
     display: flex;
     flex-direction: column;

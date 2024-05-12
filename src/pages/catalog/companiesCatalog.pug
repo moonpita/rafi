@@ -1,0 +1,114 @@
+html
+  link(rel="stylesheet", href="../../shared/styles/nouislider.min.css")
+  link(rel="stylesheet", href="./catalog.css")
+
+
+  include ./catalogVars.pug
+  include ../../widgets/header/header.pug
+  
+  
+  block Variables
+
+  include ../../shared/ui/inputs/checkboxInput.pug
+
+  .container 
+    h1.page-title.productsSubcategories__title Products
+    form.catalog 
+      .catalog-mob-top 
+        .catalog-mob-top__filter
+          span Categories <img src="../../shared/img/bottomArrowBlack.svg">
+      .catalog-left.overlayContent
+        .catalog-left-content 
+          .acc-btn.catalog-left__block--btn.active
+              span Categories 
+              img(src="../../shared/img/arrowBottom.svg", alt="")
+          .catalog-left__block--content.active
+            a.catalog-left__block--link.back(href="./") 
+              img(src="../../shared/img/redArrowBack.svg", alt="")
+              span Back from category 
+            a.catalog-left__block--link(href="./") category X
+            a.catalog-left__block--link(href="./") category Z 
+            a.catalog-left__block--link(href="./") category X
+            a.catalog-left__block--link(href="./") category Z 
+            a.catalog-left__block--link(href="./") category X
+            a.catalog-left__block--link(href="./") category Z 
+            a.catalog-left__block--link(href="./") category X
+            a.catalog-left__block--link(href="./") category Z 
+            a.catalog-left__block--link(href="./") category X
+            a.catalog-left__block--link(href="./") category Z 
+            a.catalog-left__block--link(href="./") category X
+            a.catalog-left__block--link(href="./") category Z 
+            a.catalog-left__block--link(href="./") category X
+            a.catalog-left__block--link(href="./") category Z 
+          
+
+      .catalog-right 
+        .catalog-top 
+          .catalog-top-filter.catalog-top-filter__toggle
+            input.catalog-top-filter__toggle--input(type="checkbox" name="license" id="license")
+            label.catalog-top-filter__text.catalog-top-filter__toggle--text(for="license") Indonesian License
+
+          .catalog-top-filter.catalog-top-filter__open(data-name="leng")
+            .catalog-top-filter__text.catalog-top-filter__open--text Project size <img src="../../shared/img/bottomArrowBlack.svg">
+            .catalog-top-filter.catalog-top-filter__open--menu.overlayContent(data-name="leng") 
+              +checkboxInput('length051', false, 'length051', '0.5m 1')
+              +checkboxInput('length11', false, 'length11', '1m 1')
+              +checkboxInput('length21', false, 'length21', '2m 1')
+              +checkboxInput('length231', false, 'length213', '2m 1')
+      
+          .catalog-top-filter.catalog-top-filter__toggle
+            input.catalog-top-filter__toggle--input(type="checkbox" name="bali" id="bali")
+            label.catalog-top-filter__text.catalog-top-filter__toggle--text(for="bali") Projects in Bali
+        
+          .catalog-top-filter.catalog-top-filter__open(data-name="any") 
+            .catalog-top-filter__text.catalog-top-filter__open--text Project type <img src="../../shared/img/bottomArrowBlack.svg">
+            .catalog-top-filter.catalog-top-filter__open--menu.overlayContent(data-name="any") 
+              +checkboxInput('length051', false, 'length051', '0.5m 1')
+              +checkboxInput('length11', false, 'length11', '1m 1')
+              +checkboxInput('length21', false, 'length21', '2m 1')
+              +checkboxInput('length22', false, 'length22', '2m 2')
+        .catalog-items 
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17-1.png", alt="")
+            .catalog__item--title Air Conditioning and Mechanical Ventilation System design
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17-2.png", alt="")
+            .catalog__item--title Air Coal Venon System design
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17.png", alt="")
+            .catalog__item--title Airign
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17-1.png", alt="")
+            .catalog__item--title Aitem design
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17-2.png", alt="")
+            .catalog__item--title Air 
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17.png", alt="")
+            .catalog__item--title Airign
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17-1.png", alt="")
+            .catalog__item--title Air Conditioning and Mechanical Ventilation System design
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17-2.png", alt="")
+            .catalog__item--title Air Coal Venon System design
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17.png", alt="")
+            .catalog__item--title Airign
+          a.catalog__item(href="https:wwww.google.com")
+            img.catalog__item--img(src="./img/Rectangle 17-1.png", alt="")
+            .catalog__item--title Air Conditioning and Mechanical Ventilation System design
+        include ../../widgets/pagination/pagination.pug
+        +pagination('catalog-pagination')
+
+
+  include ../../widgets/footer/footer.pug
+  <script src="https://unpkg.com/imask"></script>
+  script(src="../../shared/lib/nouislider.min.js" defer) 
+  script(src="../../shared/lib/accordion.js" defer) 
+  script(src="../../shared/lib/inputsController.js" defer) 
+  script(src="catalog.js" defer) 
+
+  
+  
+

@@ -6,6 +6,7 @@ html
 
 
   include ../../shared/ui/inputs/textInput.pug
+  include ../../shared/ui/inputs/emailInput.pug
   include ../../shared/ui/inputs/dropdownInput.pug
   include ../../shared/ui/inputs/dropdownWithSearch.pug
   include ../../shared/ui/inputs/imageInput.pug
@@ -19,7 +20,7 @@ html
     form.fillForm-form.login-form
       .fillForm-row.input-row 
         .fillForm-row__name.input-row__name Email
-        +textInput('Email', true, 'Email ')
+        +emailInput('Email', true, 'Email ')
       .fillForm-row.input-row 
         .fillForm-row__name.input-row__name Password
         +textInput('password', true, '*********')
