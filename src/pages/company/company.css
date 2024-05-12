@@ -159,6 +159,11 @@
   margin-top: auto;
 }
 
+.tippy-box * {
+  z-index: 90;
+  color: #fff;
+}
+
 @media (max-width: 1200px) {
   .company-content {
     padding-top: 60px;

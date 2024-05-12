@@ -4,6 +4,22 @@ html
 
   block Variables
 
+  include ../../shared/ui/inputs/emailInput.pug
+  include ../../shared/ui/inputs/textareaInput.pug
+
+  form.modal.qna-modal.overlayContent 
+    button.modal__close.close-overlays 
+      img.modal__close--img(src="../../shared/img/closeIconGrey.svg", alt="")
+    
+    h2.modal__title Ask a question 
+    span.modal__input-text Where to send the response?
+    +emailInput('email', true, 'E-mail')
+
+    span.modal__input-text Your question
+    +textArea('question', '', true)
+    
+    button.btn.modal__btn.close-overlays Confirm
+
   .container 
     h1.page-title.help__title frequently asked questions
 
@@ -37,7 +53,7 @@ html
     .container 
       .doYouNeedHelp 
         .doYouNeedHelp__title Do you need help?
-        button.btn.doYouNeedHelp__btn Ask question 
+        button.btn.doYouNeedHelp__btn.open-modal(data-modal="qna-modal") Ask question 
   
   include ../../widgets/newHeights/newHeights.pug
 

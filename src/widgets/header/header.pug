@@ -4,7 +4,17 @@ head
   link(rel="stylesheet" href="../../widgets/header/header.css")
 
 body 
-  .modal-bg 
+  .modal-bg.close-overlays
+
+  .modal.success-modal.success-project-modal.overlayContent 
+    button.modal__close.close-overlays 
+      img.modal__close--img(src="../../shared/img/closeIconGrey.svg", alt="")
+    
+    img.success-modal__img(src="../../shared/img/success.svg", alt="")
+    h2.modal__title Successfully! 
+    p.modal__description Your project has been submitted for moderation. After verification, the project will be posted on the website. If you have made mistakes, the answer will be sent to your personal account
+    button.btn.modal__btn.close-overlays Confirm
+
 
   .burger-menu 
     .burger-menu__close 

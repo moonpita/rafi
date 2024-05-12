@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .tabsLine {
   display: flex;
   align-items: center;
@@ -37,9 +38,16 @@
     overflow-x: auto;
     border-radius: 0px;
     margin-top: 32px;
+    background: none;
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .tabsLine::-webkit-scrollbar {
+    display: none;
   }
   .tabsLine__item {
     font-size: 12px;
+    background: var(--greyBlue);
   }
   .tabsLine__item:first-child {
     border-radius: 15px 0px 0px 15px;

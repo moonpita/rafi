@@ -17,12 +17,14 @@ function changeModalBgState(state = 'toggle') {
     return;
   }
 };
-modalBg.onclick = () => {
-  body.classList.remove('disabled');
-  modalBg.classList.remove('active');
-  document.querySelectorAll('.overlayContent').forEach(ov => ov.classList.remove('active'))
-};
-
+const closeOverlays = document.querySelectorAll('.close-overlays');
+closeOverlays.forEach(close => {
+  close.addEventListener('click', () => {
+    body.classList.remove('disabled');
+    modalBg.classList.remove('active');
+    document.querySelectorAll('.overlayContent').forEach(ov => ov.classList.remove('active'))
+  }
+)});
 
 // burger
 
@@ -35,3 +37,16 @@ burgerBtn.onclick = () => {
 burgerClose.onclick = () => {
   burgerMenu.classList.remove('active');
 }
+
+
+const modalBtns = document.querySelectorAll('.open-modal');
+
+modalBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalClass = btn.getAttribute('data-modal');
+    const modal = document.querySelector(`.${modalClass}`);
+
+    modal.classList.add('active');
+    changeModalBgState('enable');
+  })
+})

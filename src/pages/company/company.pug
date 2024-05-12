@@ -13,17 +13,17 @@ html
       img.company__image(src="./img/company.svg", alt="")
       .company-content
         .company-badges 
-          .company-badges__item 
+          .company-badges__item(data-tippy-content="<div>Organic</div><span>This badge is awarded to businesses that offer construction materials and furniture made with natural, sustainable, and non-toxic materials, promoting healthier indoor environments and reducing environmental impact.</span>") 
             img.company-badges__item--img(src="./img/badge-1.svg", alt="")
-          .company-badges__item 
+          .company-badges__item(data-tippy-content="<div>Organic</div><span>This badge is awarded to businesses that offer construction materials and furniture made with natural, sustainable, and non-toxic materials, promoting healthier indoor environments and reducing environmental impact.</span>") 
             img.company-badges__item--img(src="./img/badge-2.svg", alt="")
-          .company-badges__item 
+          .company-badges__item(data-tippy-content="<div>Organic</div><span>This badge is awarded to businesses that offer construction materials and furniture made with natural, sustainable, and non-toxic materials, promoting healthier indoor environments and reducing environmental impact.</span>") 
             img.company-badges__item--img(src="./img/badge-3.svg", alt="")
-          .company-badges__item 
+          .company-badges__item(data-tippy-content="<div>Organic</div><span>This badge is awarded to businesses that offer construction materials and furniture made with natural, sustainable, and non-toxic materials, promoting healthier indoor environments and reducing environmental impact.</span>") 
             img.company-badges__item--img(src="./img/badge-4.svg", alt="")
-          .company-badges__item 
+          .company-badges__item(data-tippy-content="<div>Organic</div><span>This badge is awarded to businesses that offer construction materials and furniture made with natural, sustainable, and non-toxic materials, promoting healthier indoor environments and reducing environmental impact.</span>") 
             img.company-badges__item--img(src="./img/badge-5.svg", alt="")
-          .company-badges__item
+          .company-badges__item(data-tippy-content="<div>Organic</div><span>This badge is awarded to businesses that offer construction materials and furniture made with natural, sustainable, and non-toxic materials, promoting healthier indoor environments and reducing environmental impact.</span>") 
             img.company-badges__item--img(src="./img/badge-6.svg", alt="")
         h1.page-title.company__title Company name 
         p.company__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -98,7 +98,9 @@ html
               .related__item--title #{related.name}
   include ../../widgets/footer/footer.pug
 
-  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+  //- <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.1"></script>
+  //- <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.5"></script>
+  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer)
   script(src="../../shared/lib/tabs.js" defer) 
   script(src="./company.js" defer) 
 
