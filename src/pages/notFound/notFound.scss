@@ -1,0 +1,39 @@
+.notFound {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__text {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 24px;
+  }
+  &__btn {
+    margin: 0 auto;
+    max-width: max-content;
+    padding: 14px 85px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .notFound__title {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .notFound__btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 0px;
+    text-align: center;
+  }
+}
